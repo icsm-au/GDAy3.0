@@ -2,7 +2,7 @@
 GDAy 3.0 transforms coordinates between GDA94 and GDA2020 datums. GDAy supports conformal and non-conformal (i.e. conformal plus distortion) transformations via bi-linear interpolation from a grid of coordinate shifts, and conformal datum transformations via seven-parameter similarity (Helmert) transformation. GDAy may be used anywhere throughout Australia provided an appropriate grid is selected.
 With GDAy, users can perform datum transformations and coordinate conversions using geographical coordinates (ie. latitude and longitude) or Universal Transverse Mercator (UTM) projection coordinates (ie. Easting, Northing and zone), whether working on one datum or between GDA94 and GDA2020. Coordinates may be transformed by entering values in the main GDAy dialog or by file input. 
 
-Note: This version of GDAy does not support GDA94 to AGD66/84 Transformations.
+Note: This version of GDAy does not support GDA94 to AGD66/84 transformations.
 
 The supported file types include:
 - Formatted Text Files  (*.dat, *.prn, *.txt).
