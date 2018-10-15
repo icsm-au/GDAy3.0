@@ -3,9 +3,9 @@ GDAy 3.0 transforms coordinates between GDA94 and GDA2020 datums. GDAy supports 
 With GDAy, users can perform datum transformations and coordinate conversions using geographical coordinates (ie. latitude and longitude) or Universal Transverse Mercator (UTM) projection coordinates (ie. Easting, Northing and zone), whether working on one datum or between GDA94 and GDA2020. Coordinates may be transformed by entering values in the main GDAy dialog or by file input. 
 
 The supported file types include:
-•	Formatted Text Files  (*.dat, *.prn, *.txt).
-•	Comma Separated Values Files  (*.csv).
-•	QLD Survey Control Database (SCDB) MAN Files  (*.man).
-•	Queensland Interchange Format (QIF) Files, Version 3  (*.qif).
-•	NEWGAN Res Files  (*.res).
+- Formatted Text Files  (*.dat, *.prn, *.txt).
+- Comma Separated Values Files  (*.csv).
+- QLD Survey Control Database (SCDB) MAN Files  (*.man).
+- Queensland Interchange Format (QIF) Files, Version 3  (*.qif).
+- NEWGAN Res Files  (*.res).
 
