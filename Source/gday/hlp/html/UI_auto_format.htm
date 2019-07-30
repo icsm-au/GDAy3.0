@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+<title>Auto format geographic coordinates</title>
+<META NAME="MS-HAID" CONTENT="auto_format">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY >
+<p class="proclabel"><a name="hidd_auto_format">To control the auto format of geographic coordinates in the the input and output edit boxes</a></p>
+<OL>
+<li>
+On the <B>Tools</B> menu, 
+click <b>Options</b>  and then click the <b>View</b> tab.
+<li>Do one or more of the following:
+<DL> 
+  <UL>
+  <LI>Select the <B>Latitudes as “positive south”</B> check box if you want GDAy to recognise both positive and negative latitude values as being 
+    in the Southern Hemisphere. This option does not apply for file transformations and as such, you must use negative values for latitudes in the Southern 
+    Hemisphere when creating a file of coordinates.
+  <LI>Select the <B>Geographic values with “N/S” and “E/W” </B>check box if you want GDAy to format the input and output coordinate values with characters to reflect their 
+    position in relation to the equator and Greenwich meridian. For example, if –27.24373345 is entered in for latitude and 153.57386347 is 
+    entered in for longitude, when you press the Tab key the edit boxes will show S 27.24373345 and E 153.57386347 respectively.
+  <LI>Select the <b>Degrees minutes and seconds values with symbols </b>check box if you want GDAy to display 
+    symbols degrees minutes and seconds. For example, if –27.24373345 is entered 
+    in for latitude and 153.57386347 is entered in for longitude, when you press 
+    the Tab key the edit boxes will show … 27° 24’ 37.3345” and … 153° 57’ 38.6347” respectively. This also applies if your 
+    input or output coordinates are in degrees and minutes or 
+    decimal  degrees.</LI></UL></DL>
+  </li>
+  </OL>
+<p>&nbsp;<P>
+<P CLASS="note">Notes</P>
+<ul>
+  <LI>This auto format option applies only to geographic coordinates 
+  displayed in the input and output edit boxes on the main GDAy dialog. 
+  <LI>To use the auto format option correctly, only enter in numeric characters 
+  in the input edit boxes.
+  <LI>Each time you tab out of an input edit box, the&nbsp;auto formatting re-applied.  
+  <li>If you are working with <A href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup>projection coordinates</A>, your input coordinates will not be 
+formatted.</li>
+</ul>
+</BODY>
+</HTML>

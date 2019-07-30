@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Preliminary calculations</title>
+<META NAME="MS-HAID" CONTENT="preliminary_calculations">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_preliminary_calculations">Preliminary calculations</a></h1>
+<p>For the conversion of coordinates between the relevant coordinate systems, the length of an arc of a meridian, foot-point latitude, and the radius of curvature must be computed.</p>
+<P>&nbsp;</P>
+<UL>
+  <LI><STRONG>Meridian distance</STRONG> is given by the series expansion: 
+  <UL>
+  <P><IMG src="..\images\mdse.gif" ></P>
+  <P>where:</P>
+  <UL>
+  <P><IMG src="..\images\A0.gif"><BR><BR>
+  <IMG src="..\images\A2.gif"><BR><BR>
+  <IMG src="..\images\A4.gif"><BR><BR>
+  <IMG src="..\images\A6.gif"></P><P>&nbsp;</P></UL></UL>
+  <LI><STRONG>Foot-point latitude</STRONG> (in radians) is calculated by: 
+  <UL>
+  <P><IMG src="..\images\fpl1.gif">
+  <IMG src="..\images\fpl2.gif"></P>
+  <P>where:</P>
+  <UL>
+  <P><IMG src="..\images\n.gif"><BR><BR>
+  <IMG src="..\images\G.gif"><BR><BR>
+  <IMG src="..\images\sigma.gif"><BR><BR>
+  <IMG src="..\images\m.gif"></P><P>&nbsp;</P></UL></UL>
+  <LI><STRONG>Radii of curvature</STRONG>  is given by: 
+  <UL>
+  <P><IMG src="..\images\rocpv.gif"><BR><BR>
+  <IMG src="..\images\rocm.gif"><BR><BR>
+  <IMG src="..\images\roc-pv_m.gif"></P><P>&nbsp;</P></UL>
+  </LI></UL>
+<P>&nbsp;</P>
+<P CLASS="note">Note</P>
+<UL>       
+  <LI>It is essential that the appropriate reference ellipsoid is used for correct coordinate output. For example, use the 
+  <A href="SRC=html\popup.txt TOPIC=IDH_GRS80" 
+  id=wPopup>GRS80</A> for calculations on the <A href="SRC=html\popup.txt TOPIC=IDH_GDA" id=wPopup>GDA</A>.
+  <LI>For more information, see the topic <STRONG>Conversion between Ellipsoidal and Grid Coordinates</STRONG> in the <A href="http://www.anzlic.org.au/icsm/gdatm/" id=extUrl target=_new title=http://www.anzlic.org.au/icsm/gdatm/>GDA Technical Manual</A><SPAN class=printOnly>(http://www.anzlic.org.au/icsm/gdatm/)</SPAN>.</LI></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=geo_to_grid_formula;grid_to_geo_formula;geo_to_cart_formula;cart_to_geo_formula;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

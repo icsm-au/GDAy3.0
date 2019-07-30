@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Transforming a single point</title>
+<META NAME="MS-HAID" CONTENT="trans_single_point">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<a name="hidd_trans_point"></a>
+<b>To Transform a single point</b>
+<p>                     </p>
+<OL>
+  <LI>Enter&nbsp;the coordinate values for the point you wish to transform into 
+  the input edit boxes on the left hand side of the main GDAy dialog. 
+  <LI>Click <B>Compute</B>. The 
+  transformed coordinates will appear in the output edit boxes on the right. Each time you press <b>Compute</b>, the input and output coordinates are printed 
+  to the interactive output file.</LI></OL>
+<P class=important>Important</P>
+<UL>
+  <LI>Before attempting to transform coordinates, ensure that you have selected 
+  the right coordinate system parameters.</LI></UL>
+<P CLASS="note">Notes</P>
+<UL>
+<li>
+The corresponding interpolation accuracy values are printed in the far right edit boxes. 
+These values represent a measure of quality of the distortion grid in terms of its ability 
+to model the actual distortion in that area. For example, if <font face="Symbol">±</font> 0.050m 
+is displayed, this means that the accuracy of the transformation (using the specified distortion grid) 
+has been performed to within 50mm. It does not mean that the accuracy of the transformed coordinates 
+is now <font face="Symbol">±</font> 
+  50mm. If the accuracy values could not be determined, the edit boxes will 
+  contain 3 dashes: “ --- “. This means that either the coordinates for the 
+  point were outside the limits of the distortion grid, or the specified 
+  distortion grid contains no interpolation accuracy information for the given 
+  area. 
+  <LI>In the instances where the input coordinates for a point are outside the specified distortion grid, 
+  a message box will be displayed prompting you to choose whether you would like to continue with a 7 Parameter 
+  transformation only. Where this occurs, the information displayed in the message box and the input coordinates 
+  are printed to the<b> </b><A href="LF_view.htm">Log file</A>.
+  
+<li>
+You can view all interactive transformations by selecting <b>View Output File </b>from <b>Interactive Output </b>on the <b>File</b> menu<b> </b>to open the 
+  output file in NotePad. 
+  
+<li>
+You can view the Log file by selecting&nbsp;<B>View 
+  Log File</B> on the <B>Tools</B>       menu.</li></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=choose_ntv2_grid;choosing_coordinate_system;conformal_trans_formula;bilinear_algorithm" id=relTopics>Related Topics</A></P>
+</BODY>
+</HTML>

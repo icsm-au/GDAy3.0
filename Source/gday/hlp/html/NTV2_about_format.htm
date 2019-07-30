@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>About the NTv2 distortion grid file format</title>
+<META NAME="MS-HAID" CONTENT="ntv2_format">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_ntv2_format">About the NTv2 distortion grid file format</a></h1>
+<p>A number of options were investigated with regard to adopting an appropriate file format for the gridded transformation data. 
+Ultimately it was decided that the Canadian National Transformation Version 2.0 (NTv2) format should be adopted as the standard file format for all Australian 
+distortion grid files.
+<P>There were three main reasons for this decision:<P>
+<ul>
+<li>NTv2 is a widely accepted format for transformation 
+  data in North America (especially Canada) and as such some of the major GIS 
+  packages are able to read and use transformation grids supplied in this format.
+<li>NTv2 allows for the accuracy of the transformation as 
+  well as the transformation itself to be provided on the grid. The ability for 
+  users to get some quantitative measure on the quality of the transformation 
+  was regarded as a desirable feature.  
+<li>NTv2 permits the use of sub-grids of different density.  For example, it may be preferable that the transformation grid in an urban area be more dense than that required for a rural area.  The NTv2 format can routinely accommodate this requirement.</li>
+</ul>
+<P>             &nbsp; </P>
+<p>The NTv2 grid format and transformation software has been developed by the Geodetic Survey Division of Geomatics, Canada.  Information about NTv2 can be obtained from the 
+<A ID="extUrl" HREF="http://www.geod.emr.ca" TITLE="http://www.geod.emr.ca" TARGET="_new">Geodetic Survey Division home page</A><SPAN CLASS="printOnly">(http://www.geod.emr.ca)</SPAN>.  
+The NTv2 software, documentation (including Users Guide and Developers Guide) and the transformation grid for Canada can be purchased on a CD-ROM from Geomatics Canada.  On-line transformations are also possible on the Geomatics Canada home page.</p>
+<p>Application of the NTv2 format to the Australian situation is straightforward, requiring only that the Canadian convention for treating west longitudes as positive be taken into account.  In Australia longitudes are regarded as positive to the east.</p>
+<P>&nbsp;</P>
+<P CLASS="note">Note</P>
+<ul>
+<li>GDAy incorporates a distortion grid in the NTv2 file format to perform 
+coordinate transformations.</li>
+</ul>
+<P><A href="CHM =gday.chm META=bilinear_algorithm;ntv2_binary_files;ntv2_export;ntv2_view_properties;ntv2_gridex;choose_ntv2_grid" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,19 @@
+:Base GridEx.hlp
+:Title Grid Extractor Help
+1 Getting Started with Grid Extractor
+2 What is Grid Extractor?=HID_WHATIS_GRIDEX
+2 Why use Grid Extractor?=HID_WHY_USE_GRIDEX
+2 What's displayed in the Grid Extractor dialog=HID_DLG_DISPLAY
+2 Overview of NTv2 Distortion Grids
+3 About the NTv2 Distortion Grid file format=HID_NTV2_FORMAT
+3 About NTv2 Binary Files=HID_BINARY_FILES
+1 Creating a New Grid - Step by Step Instructions
+2 Overview=HID_OVERVIEW
+2 Choosing a distortion grid file=HID_CHOOSE_GRID
+2 Specifying a new grid file name=HID_NEWGRID_NAME
+2 Specifying the new grid limits=HID_GRID_LIMITS
+2 To extract the new grid=HID_GRID_EXTRACT
+2 Viewing the Log File=HID_VIEW_LOG
+2 Understanding Grid Extractor messages=HID_GRIDEX_MESSAGES
+1 End User License Agreement
+2 Grid Extractor Software License Agreement=HID_GRIDEX_LICENSE

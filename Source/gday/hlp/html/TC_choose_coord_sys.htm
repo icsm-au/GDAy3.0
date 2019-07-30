@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Choosing the right coordinate system parameters</title>
+<META NAME="MS-HAID" CONTENT="choosing_coordinate_system">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<a name="hidd_coordinate_system"></a>
+<b>To select the right coordinate system parameters</b>&nbsp;
+<OL>
+<li>On the <b>Tools</b> menu, click <b>Coordinate System</b>.
+<li>From the drop-down combo box in the <b>Input Coordinates</b> group, click on the desired <A href="SRC=html\popup.txt TOPIC=IDH_DATUM" id=wPopup >datum</A>.
+If a new datum was selected, the input <b>Coordinates</b> should change to reflect the relevant types. Select the desired coordinates to be used.
+<li>If you selected <A href="SRC =html\popup.txt TOPIC=IDH_GEOGRAPHIC" id=wPopup >geographic</A>, you now have the option to work with degrees, minutes and seconds; degrees and minutes, or; decimal degrees format (as given by the radio buttons). Otherwise, the three radio buttons will become greyed. This indicates that the coordinates are <A href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup >projected</A> and that they will be displayed in metres.
+<li>Follow the same procedure above for the <b>Output Coordinates</b> group.
+<li>If your output coordinates will be projected and you would like to force the coordinates onto another zone, click the <b>Prompt for output zone</b> check box.
+<li>Click OK to accept the changes.</li></OL>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>You may work with any possible combination of 
+  coordinate and datum settings.
+  
+<li>The selected coordinate system settings apply to both interactive and points file transformations.
+<li>If the input and output datum settings are the same, then a datum transformation will not occur; only a conversion of coordinates will be performed. If Cancel is pressed, the original coordinate system parameters are retained.
+<li>After closing and running GDAy at another time, the parameters you set previously will be retained.
+<LI>The Tools menu can also be accessed by right-clicking on the GDAy dialog.</LI>
+</ul>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=gda_definition;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

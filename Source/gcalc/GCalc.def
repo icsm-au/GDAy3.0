@@ -1,0 +1,32 @@
+; GCalc.def : Declares the module parameters for the DLL.
+
+LIBRARY      "GCalc"
+
+EXPORTS
+    ; Explicit exports can go here
+
+GCALC_BiLinearTransformation		@1
+GCALC_CarttoGeo						@2
+GCALC_CreateGridIndex				@3
+GCALC_DatumTran						@4
+GCALC_DegtoDms						@5
+GCALC_DegtoDmin						@6
+GCALC_DmstoDeg						@7
+GCALC_DmintoDeg						@8
+GCALC_ExportToAscii					@9
+GCALC_ExportToBinary				@10
+GCALC_FileTran						@11
+GCALC_FormatDMS_String				@12
+GCALC_GeotoCart						@13
+GCALC_GeotoGrid						@14
+GCALC_GridtoGeo						@15
+GCALC_PointTran						@16
+GCALC_PrintLogFile					@17
+GCALC_ReportGridProperties			@18
+
+; new in GCalc.DLL version 2.1
+GCALC_MapGridTransformation			@19
+GCALC_ReturnFileProgress			@20
+GCALC_SetFileTranHeader				@21
+GCALC_SetByteOffset					@22
+GCALC_GetByteOffset					@23

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Selecting the conformal transformation parameters</title>
+<META NAME="MS-HAID" CONTENT="conformal_parameters">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html;charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<a name="hidd_grid_and_params"></a>
+<p>
+<b>Selecting the conformal transformation parameters</b></p>
+<p>
+Whenever you are transforming a single point or a file of points and the point being transformed lies outside the limits of the distortion grid, a 7-Parameter coordinate transformation (also known as a 3-Dimensional similarity transformation) may be performed. In this case, it is important that you select the most appropriate transformation parameters for your area of interest.  For more information, see the 3-Dimensional Similarity Transformation topic in the <b>GDA Technical Manual</b>.</p>
+<p>
+<P>&nbsp;</P>
+<p>
+<b>To select the desired transformation parameters</b>
+<ol>
+<li>
+From the <b>Parameters</b> drop-down 
+  combo box, click on the desired transformation parameters. 
+  
+<li>
+Click OK to accept the changes.</li>
+</ol>
+<P>&nbsp;</P>
+<P CLASS="note">Note</P>
+<ul>
+<li>
+These parameters can be used for projects of medium 
+  accuracy (of the order 1 m). To achieve the greatest accuracy, the 
+  transformation of a point must incorporate the distortion grid.  
+<li>
+When you have selected a new distortion grid, the 
+  filename is displayed in the status bar on the bottom of the main GDAy dialog.  
+<li>
+If an invalid grid file is chosen, or the grid file is 
+  corrupt, then you will be prompted to continue with a conformal 7-Parameter 
+  coordinate transformation each time a transformation is performed.  
+<li>
+Although this method of coordinate transformation requires a valid ellipsoidal height, you are not prompted to enter in any such value. Where a 7-Parameter coordinate transformation is performed, an ellipsoidal height of zero (0) is used by default.</li>
+</ul>
+</BODY>
+</HTML>

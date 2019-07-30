@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Output coordinates precision</title>
+<META NAME="MS-HAID" CONTENT="output_precision">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html;charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<p class="proclabel">To set the precision of the&nbsp;<a name="hidd_precision"> coordinates on</a> the main GDAy dialog</p>
+<OL>
+  <LI> On the <B>Tools</B> menu, click 
+  <B>Options</B>  and   then click the <B>View</B> tab. 
+  <LI>From the <B>Working precision</B> group, do one or 
+  more of the following:        
+  <UL>
+    <LI>In the <STRONG>Geographic</STRONG> edit box, specify 
+    the number of decimal places for the output geographic coordinates. 
+    <LI>In the <STRONG>Projection</STRONG> edit box, specify 
+    the number of decimal places for the&nbsp;output projection coordinates.</LI></UL>
+  </LI></OL>
+<p>&nbsp;<P>
+<P CLASS="note">Notes</P>
+<UL>
+  <LI>
+  The <B>Working precision</B> option applies only to 
+  the values in the <B>Output coordinates</B>     edit boxes on the main GDAy 
+  dialog.
+  <LI>
+  
+You can view up to 7 decimal places for seconds and 4 
+  decimal places for metres.
+  <LI>
+  Where the output coordinates are in decimal degrees, the displayed precision will be the number of decimal places for seconds plus 4. For example, if you change the value in the <b>Minutes / Seconds:</b> edit box to 6, each time you press <b>Compute</b> (depending on the type of output coordinates 
+  you have selected) the output edit boxes will show 
+  
+<P>
+<TABLE >
+  <TR vAlign=top>
+    <TH style="WIDTH: 70%" ><B>Format type</B><TH><B>Output edix box display </B></TD>
+  <TR vAlign=top>
+    <TD>degrees, minutes and seconds (auto formatted with symbols)</TD><TD> 0° 00’ 00.000000” </TD></TR>
+  <TR vAlign=top>
+    <TD>degrees and minutes (auto formatted with symbols)</TD><TD>     0° 00.000000' </TD></TR>
+  <TR vAlign=top>
+    <TD>degrees, minutes and seconds (without symbols)</TD><TD>   27.0000000000 </TD></TR>
+  <TR vAlign=top>
+    <TD>degrees and minutes (without symbols)</TD><TD>      27.0000000000 </TD></TR>
+  <TR vAlign=top>
+    <TD>decimal degrees</TD><TD>   27.0000000000 </TD></TR>
+  <TR vAlign=top></TR>
+  </TABLE></P>        
+          </LI></UL>
+</BODY>
+</HTML>

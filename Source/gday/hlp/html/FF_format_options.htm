@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Formatting options for geographic coordinates</title>
+<META NAME="MS-HAID" CONTENT="format_geo_options">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_format_geo_options"></a>Formatting options for geographic coordinates</h1>
+<P>When you want to transform Formatted text files 
+(*.dat, *.txt or *.prn) or Microsoft Comma separated values 
+files (*.csv) having <A ID="wPopup" HREF="SRC=html\popup.txt TOPIC=IDH_GEOGRAPHIC">geographic coordinates</A>,
+you can format your data to one of five types: <STRONG>Decimal 
+Degrees</STRONG>, <STRONG>DMS HP Notation</STRONG>, <STRONG>Separated DMS 
+Fields</STRONG>, <STRONG>DMIN HP Notation</STRONG>, and <STRONG>Separated DMIN 
+Fields</STRONG>. </P>
+<DL>
+<DT><b><B>Decimal Degrees</B> </b>
+<DD>If you work with decimal degrees values, the 
+  <B>Latitude</B> and <B>Longitude</B> 
+  fields (as described in Formatted text files and Comma separated files) should 
+  each contain only one numeric value.
+  <DD>
+          
+  <DD>
+  <DD>&nbsp;
+  <DD>If you are working with *.dat, *.txt or *.prn files, the maximum number of 
+  significant digits your values can have is 15 significant figures. Since the 
+  maximum field width for both latitude and longitude is 16 characters, 
+  excluding the decimal point leaves a maximum of 15 characters. For all 
+  coordinates used throughout Australia, the number of significant figures for 
+  the Latitude field will be reduced to 14 to cater for the negative (minus) 
+  sign.
+  <DD>          
+              
+             
+               
+            
+                
+     &nbsp;
+  <DD>          
+                
+      
+  <DD>              
+              
+             
+              
+            
+                
+  
+  <DD>
+  <DD>If you are working with *.csv files, you do not need 
+  to worry about a maximum character width. You only need to be concerned about 
+  placing the whole of each value within the commas. 
+  <DD>             
+   &nbsp;
+  
+
+<DT><b>DMS HP Notation</b>
+<DD>HP Notation stands for Hewlett Packard Notation and is 
+  another well accepted format for degrees minutes and seconds. This form of 
+  numeric input requires no additional spaces to delineate the values of 
+  degrees, minutes and seconds. All values must be formatted so that the decimal 
+  point appears directly after the degrees value, not after units of seconds.
+  <DD>        
+               
+             
+               
+              
+  <DD>
+  <DD>&nbsp;
+  <DD>For example, a value of -24° 09’ 06.42588” would appear as -24.090642588
+  <DD>
+  <DD>
+  <DD>&nbsp;
+  <DD>When working with HP Notation in *.dat, *.txt or *.prn files, the 
+  <B>Latitude</B> and <B>Longitude</B> fields (as described in Formatted text 
+  files and Comma separated files) should be formatted exactly as they would be 
+  for decimal degrees. For example, the maximum number of significant digits 
+  your values can have is 15 significant figures. Since the maximum field width 
+  for both latitude and longitude is 16 characters, excluding the decimal point 
+  leaves a maximum of 15 characters.&nbsp;
+  <DD>
+  <DD>
+  <DD>&nbsp;
+  <DD>If you are working with *.csv files, you do not need to worry about a 
+  maximum character width. You only need to be concerned about placing the whole 
+  of each value within the commas. 
+  <DD>               
+               
+       &nbsp; 
+  <DD>               
+               
+        
+  <DD>
+  
+
+<DT><b>Separated DMS Fields</b>
+<DD>
+If you work with Separated DMS fields values, the <b>Latitude</b> and <b>Longitude</b> fields 
+  (as described in Formatted text files and Comma separated files) should be 
+  formatted with spaces or commas (depending on the file type) between the 
+  degrees, minutes and seconds values. The degrees and minutes values should 
+  have a precision of zero (like an integer value), whilst the seconds value can 
+  have a number of decimal places. 
+  
+<DD> 
+              
+               
+             
+                
+        
+  
+<DD>
+  
+<DD>&nbsp;
+  
+<DD>For example, a value of -24° 09’ 06.42588” would appear 
+  as -24 09 06.42588 or -24 9 6.42588 in a *.dat, *.txt or *.prn file. 
+  Similarly, these values would appear as ..…,–24,09,06.42588,….. or 
+  ..…,–24,9,6.42588,….. in a *.csv file. If you are working with *.dat, *.txt or 
+  *.prn files, the maximum precision your seconds values can have is 7 decimal 
+  places.
+  
+<DD>         
+                  
+          
+               
+               
+   
+  <DD>
+  <DD>&nbsp;
+  <DD>If you are working with *.csv files, you do not need 
+  to worry about a maximum character width. You only need to be concerned about 
+  placing a comma between the degrees, minutes and seconds values.
+  <DD>            
+               
+           &nbsp; 
+  <DD>               
+               
+        
+  <DD>
+  
+
+<DT><b> DMIN&nbsp;HP Notation</b>
+<DD>The formatting requirements for DMIN HP Notation are 
+  similar to DMS HP Notation, however the coordinates are formatted to degrees 
+  and minutes only. All values must be formatted so that the decimal point 
+  appears directly after the degrees value, not after units of minutes. 
+  
+<DD>
+  
+<DD>
+  
+<DD>&nbsp;
+  
+<DD>For example, a value of -24° 9.001071’ would appear 
+  as -24.09001071.
+  
+<DD>          
+  &nbsp; 
+  
+<DD>         
+    
+  
+<DD>
+  
+
+<DT><b>Separated DMIN&nbsp;Fields</b>
+<DD>The formatting requirements for Separated DMIN Fields 
+  are similar to Separated DMS Fields, however the coordinates are formatted to 
+  degrees and minutes only. If you work with Separated DMIN fields values, the 
+  Latitude and Longitude fields should be formatted with spaces or commas 
+  (depending on the file type) between the degrees and minutes values. The 
+  degrees value should have a precision of zero (like an integer value), whilst 
+  the minutes value can have a number of decimal places. 
+  
+<DD>
+<DD>
+  
+<DD>&nbsp;
+  
+<DD>For example, a value of -24° 9.001071” would appear as: 
+
+  <DL>
+    <UL>
+      <UL>
+<LI>
+<code>-24 09.001071  </code>or <code>  - 24 9.001071</code>in a 
+      <STRONG>*.dat file</STRONG>, and 
+      
+<LI>
+..…<code>,–24,09.001071,</code>….. or ..…<code>,–24,9.001071,</code> …<code></code>in a <STRONG>*.csv file</STRONG>.</LI></UL></UL></DL>
+<DD>
+  <DD>
+  <DD>
+  <DD>&nbsp;
+  <DD>If you are working with *.csv files, you do not need to worry about a 
+  maximum character width. You only need to be concerned about placing a comma 
+  between the degrees and minutes values.</DD></DL>
+<P></P>
+
+<P CLASS="note">Note</P>
+<UL>
+<li>
+See Appendix A of the GDAy 2.0 User’s Guide for more 
+  information on formatting options.</li></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=dat_file_format;csv_file_format;supported_file_types" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

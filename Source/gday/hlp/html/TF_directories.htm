@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Transforming folders</title>
+<META NAME="MS-HAID" CONTENT="file_tran_directory">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<p class="proclabel"><a name="hid_file_tran_directory">To transform multiple folders of files</a></p>       
+<OL>
+  <LI>On the <B>File</B> menu, select <B>Transform Folder</B>.  
+<li>Click <b>Look in</b>.  
+<li>From the explorer tree, either click the drive or 
+  root folder that contains the input files or type in the full folder 
+  path in the <STRONG>Folder</STRONG> box, and then click <STRONG>OK</STRONG>.  
+<li>From the <b>Files format</b> box in the <STRONG>Input 
+  Folder</STRONG> group, choose the extension that matches the input 
+  file-type you are working with (note: the available types include Formatted 
+  Text (*.dat, *.prn, *.txt), Comma Separated Values (*.csv) files), SCDB files 
+  (*.man), NEWGAN res files (*.res), and Queensland Interchange Format (*.qif)).
+  
+<li>
+If the selected coordinate system 
+  parameters specify that the input coordinates are <A 
+  href="SRC=html\popup.txt TOPIC=IDH_GEOGRAPHIC" id=wPopup>geographic 
+  coordinates</A>, then select the appropriate format type from the 
+  <STRONG>Geographic Format</STRONG>   
+          box.
+  
+<li>
+Click <STRONG>Search for files in all subfolders</STRONG> if you 
+  wish to transform all other subfolders contained within the specified 
+  folder.
+  
+<li>
+Click  <b>Save in</b>. 
+  
+<li>
+From the explorer tree, either click the drive or 
+  root folder that contains the output files or type in the full folder 
+  path in the <STRONG>Folder</STRONG> box, and then click <STRONG>OK</STRONG>   
+          .
+  
+<li>
+From the <b>Files format</b> box in the <STRONG>Output 
+  Folder</STRONG> group, choose the estension 
+  that matches the output file-type you are working with (note: the 
+  available types displayed will reflect the allowable file translations 
+  depending on the selected input file format).   
+  
+<li>
+If the selected coordinate system 
+  parameters specify that the input coordinates are geographic coordinates, 
+  then select the appropriate format type from the <STRONG>Geographic 
+  Format</STRONG> box.   
+  
+<li>
+If the output file format will be either a formatted 
+  text (*.txt) or comma separated values (*.csv) file, click <STRONG>Write 
+  header to dat/csv output files</STRONG> if you wish 
+  to have a standard header printed at the start of every output file.
+
+<li>
+Click <b>OK</b>.</li>
+</OL>
+
+<P>&nbsp;</P>
+<P class=important>Important</P>
+<UL>
+  <LI>Before attempting to transform a folder of files, 
+  ensure that you have selected the right coordinate system parameters and that 
+  <STRONG>all</STRONG>        files in the input 
+  folder correspond with the selected coordinate&nbsp;type, ie. decimal degrees; degrees minutes 
+  and seconds; or HP notation.</LI></UL>
+<P class=note>Notes</P>
+<UL>
+  <LI>
+  <div>        
+            
+      Since GDAy assumes that all files in a folder will 
+  be of the same coordinate type, this method of transforming 
+  files requires you to order your files into subfolders of the same 
+  coordinate type, such as decimal degrees or UTM coordinates.</div>
+  <LI>
+  <DIV>You can not use this multiple file transformation function to transform 
+  files that contain coordinates of different types.</DIV>
+  <LI>             
+    If the specified output folder is the input folder,&nbsp;the output file names 
+  will be exactly that of the input file names with a ‘_’ character inserted at 
+  the front of the file name. For example, if&nbsp;the input folder contains a 
+  file called&nbsp;“GDA94 HP1.dat”, the output file name will be “_GDA94 HP1.dat”. 
+  <LI>If you are transforming a Queensland Interchange 
+  Format file (*.qif) and the coordinates to be printed to the output file are 
+  projection coordinates, you will be prompted to specify a zone for the output 
+  file. Specifying a unique zone will ensure that all transformed coordinates 
+  will be projected over a single zone, regardless of how far east and west the 
+  file spans. 
+  <LI>
+  <DIV>
+ After the files have been successfully transformed, you will be prompted to 
+transform another folder. If at least one point in&nbsp;an input file could not be transformed, or an 
+error occurred in the file-read/write process, the particular error details and the input 
+coordinates are printed to the<b> </b><A href="LF_view.htm">Log File</A>.</DIV>
+  <LI>
+  <DIV>             If 
+  any of the points within&nbsp;a file lie outside the limits 
+  of the distortion grid, they will be transformed using a 
+  7-Parameter conformal transformation. In this case, the transformation parameters selected from the 
+  Select Distortion Grid dialog box will be used.</DIV>        
+              
+                
+          
+  <LI>
+  <DIV>You can view the Log file by selecting <b>View Log File</b> on the <b>Tools</b> menu.</DIV>
+  <LI>
+  <DIV>If you want to transform latitudes and longitudes and the <b>Separated DMS fields</b> and 
+  <b>HP Notation</b> option is transparent, then you will have to go back to the 
+  <b>Coordinate System</b> dialog box to select the right 
+  coordinate type. </DIV></LI></UL>
+<P>&nbsp;</P>
+<P><A 
+href="CHM =gday.chm META=choose_ntv2_grid;choosing_coordinate_system;conformal_trans_formula;bilinear_algorithm;dat_file_format;csv_file_format;;format_geo_options;supported_file_types;file_tran_dir_create" id=relTopics>Related Topics</A></P>
+<P>&nbsp;</P>
+</BODY>
+</HTML>

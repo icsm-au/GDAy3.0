@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800225">
+<param name="Font" value="Tahoma,8,0">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Getting Started with GDAy 3.0">
+		<param name="Local" value="html\Default.htm">
+		<param name="URL" value="html\DEF_topic_not_found.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="What's displayed in the main GDAy dialog">
+			<param name="Local" value="html\GS_whats_displayed.htm">
+			<param name="URL" value="html\DEF_topic_not_found.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Running GDAy for the first time">
+			<param name="Local" value="html\GS_run_GDAY.htm">
+			<param name="URL" value="html\DEF_topic_not_found.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="What's new in GDAy 3.0">
+			<param name="Local" value="html\GS_whats_new.htm">
+			<param name="URL" value="html\DEF_topic_not_found.htm">
+			<param name="ImageNumber" value="11">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Using GDAy">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="GDAy Menus">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File Menu">
+				<param name="Local" value="html\GM_file_menu.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Transform menu">
+				<param name="Local" value="html\GM_transform_menu.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tools menu">
+				<param name="Local" value="html\GM_tools_menu.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Help menu">
+				<param name="Local" value="html\GM_help_menu.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Transforming Coordinates">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Transformation overview">
+				<param name="Local" value="html\TC_overview.htm">
+				<param name="ImageNumber" value="21">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Choosing a distortion grid file">
+				<param name="Local" value="html\TC_choose_grid.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Choosing the right coordinate system parameters">
+				<param name="Local" value="html\TC_choose_coord_sys.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Transforming a single point">
+				<param name="Local" value="html\TC_trans_single_point.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Transforming Files">
+				<param name="Local" value="html\TF_overview.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Transform a points file">
+					<param name="Local" value="html\TF_point_file.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Transform multiple files in a folder">
+					<param name="Local" value="html\TF_multiple_files.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Transform multiple folders of files">
+					<param name="Local" value="html\TF_directories.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="File Format Reference">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Supported file types">
+						<param name="Local" value="html\FF_supported_types.htm">
+						<param name="URL" value="html\DEF_topic_not_found.htm">
+						<param name="ImageNumber" value="21">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Formatted text files">
+						<param name="Local" value="html\FF_text_files.htm">
+						<param name="URL" value="html\DEF_topic_not_found.htm">
+						<param name="ImageNumber" value="21">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Comma separated values files">
+						<param name="Local" value="html\FF_csv_files.htm">
+						<param name="URL" value="html\DEF_topic_not_found.htm">
+						<param name="ImageNumber" value="21">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Formatting options for geographic coordinates">
+						<param name="Local" value="html\FF_format_options.htm">
+						<param name="URL" value="html\DEF_topic_not_found.htm">
+						<param name="ImageNumber" value="21">
+						</OBJECT>
+				</UL>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Managing Global User Preferences">
+			<param name="Local" value="html\GUI_options_overview.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="User Interface Options">
+				<param name="Local" value="html\UI_options.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Show point numbering">
+					<param name="Local" value="html\UI_pt_number.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Auto format geographic coordinates">
+					<param name="Local" value="html\UI_auto_format.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Output coordinates precision">
+					<param name="Local" value="html\UI_output_precision.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Interactive Output File Options">
+				<param name="Local" value="html\IO_options.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Change the path of the interactive output file">
+					<param name="Local" value="html\IO_settings.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Create a new interactive output file">
+					<param name="Local" value="html\IO_new.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Add station names">
+					<param name="Local" value="html\IO_station_naming.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="View the interactive output file">
+					<param name="Local" value="html\IO_view.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Print the interactive output file">
+					<param name="Local" value="html\IO_print.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Log File Options">
+				<param name="Local" value="html\LF_options.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Change the path of the log file">
+					<param name="Local" value="html\LF_settings.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Modify the log file header">
+					<param name="Local" value="html\LF_header.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="View the log file">
+					<param name="Local" value="html\LF_view.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Print the log file">
+					<param name="Local" value="html\LF_print.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Working with NTv2 Distortion Grids">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="View the current distortion grid's properties">
+				<param name="Local" value="html\NTV2_view_grid_prop.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Export the current distortion grid file">
+				<param name="Local" value="html\NTV2_export_grid.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Extract part of a grid with Grid Extractor">
+				<param name="Local" value="html\NTV2_extract_grid.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="41">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Technical Reference">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NTv2 Distortion Grid File Format">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="About the NTv2 distortion grid file format">
+				<param name="Local" value="html\NTV2_about_format.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="21">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="About NTv2 binary files">
+				<param name="Local" value="html\NTV2_about_binary.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="21">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Transformation and Conversion Algorithms">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="What you should know about datum and coordinates">
+				<param name="Local" value="html\GS_what_you should_know.htm">
+				<param name="URL" value="html\DEF_topic_not_found.htm">
+				<param name="ImageNumber" value="21">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Datum Definitions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="The Geocentric Datum of Australia (GDA) 2020">
+					<param name="Local" value="html\DT_gda_spec.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Datum Transformations">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="High accuracy grid transformation">
+					<param name="Local" value="html\DT_interpolation_formula.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Conformal transformation (7 Parameter)">
+					<param name="Local" value="html\DT_7par_formula.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Coordinate Conversions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Geographic to projection (spheroid to grid)">
+					<param name="Local" value="html\CC_geo2grid.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Geographic to cartesian (spheroid to earth centred XYZ)">
+					<param name="Local" value="html\CC_geo2cart.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Cartesian to geographic (earth centred XYZ to spheroid)">
+					<param name="Local" value="html\CC_cart2geo.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Projection to geographic (grid to spheroid)">
+					<param name="Local" value="html\CC_grid2geo.htm">
+					<param name="URL" value="html\DEF_topic_not_found.htm">
+					<param name="ImageNumber" value="21">
+					</OBJECT>
+			</UL>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="End User License Agreement">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="GDAy software license agreement">
+			<param name="Local" value="html\EULA_license_agreement.htm">
+			<param name="URL" value="html\DEF_topic_not_found.htm">
+			<param name="ImageNumber" value="39">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

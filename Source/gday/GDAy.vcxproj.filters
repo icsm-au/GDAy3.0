@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Help Files">
+      <UniqueIdentifier>{034201f6-a00a-4e55-8bec-0251f6597d05}</UniqueIdentifier>
+      <Extensions>hhp;hhc;hhk;gif;jpg</Extensions>
+    </Filter>
+    <Filter Include="HTML Help Topics">
+      <UniqueIdentifier>{838d62c1-2f86-49fb-b495-e123bc69675d}</UniqueIdentifier>
+      <Extensions>htm;html</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CoordinateSystemDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GDAy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GDAyDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridDefaultSelectDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridParametersDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridPropertiesDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsSheet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Page1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Page2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Page3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointsDirCreateDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointsDirDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointsDirProgressDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointsFileDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointsFileZoneDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StationNameDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\RegProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\GridProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\StringProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\FileProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ErrorMsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GDAy.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoordinateSystemDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GDAy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GDAyDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridDefaultSelectDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridParametersDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridPropertiesDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsSheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Page1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Page2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Page3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PointsDirCreateDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PointsDirDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PointsDirProgressDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PointsFileDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PointsFileZoneDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StationNameDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\RegProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\GridProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\StringProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\dnrmlogo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\GDA Logo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\gda.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\GDAy.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\gday_logo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="hlp\gday.hhc">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\gday.hhk">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\html\CC_cart2geo.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\CC_geo2cart.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\CC_geo2grid.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\CC_grid2geo.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\CC_prelimcalc.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\DEF_topic_not_found.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\Default.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\DT_7par_formula.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\DT_gda_spec.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\DT_interpolation_formula.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\EULA_license_agreement.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\FF_csv_files.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\FF_format_options.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\FF_supported_types.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\FF_text_files.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GM_file_menu.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GM_help_menu.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GM_tools_menu.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GM_transform_menu.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GS_install_GDAY.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GS_run_GDAY.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GS_what_you should_know.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GS_whats_displayed.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GS_whats_new.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\GUI_options_overview.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\IO_new.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\IO_options.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\IO_print.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\IO_settings.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\IO_station_naming.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\IO_view.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\LF_header.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\LF_options.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\LF_print.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\LF_settings.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\LF_view.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_about_binary.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_about_format.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_export_grid.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_extract_default.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_extract_grid.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_extract_help_default.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\NTV2_view_grid_prop.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TC_choose_coord_sys.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TC_choose_grid.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TC_choose_params.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TC_overview.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TC_trans_single_point.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TF_dir_create.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TF_directories.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TF_multiple_files.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TF_overview.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TF_point_file.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\TF_zone.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\UI_auto_format.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\UI_options.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\UI_output_precision.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\html\UI_pt_number.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="hlp\gday.hhp">
+      <Filter>Help Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\GDAy\GDA2020_Images\gda2020-1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\GDAy\GDA2020_Images\gda2020_logo_120w_90h.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\gday.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\gda2020_logo_120w_90h.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

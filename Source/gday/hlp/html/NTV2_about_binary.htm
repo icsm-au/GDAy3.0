@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>About NTv2 binary files</title>
+<META NAME="MS-HAID" CONTENT="ntv2_binary_files">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_binary_files">About NTv2 binary files</a></h1>
+<p>
+<A href="SRC =html\popup.txt TOPIC=IDH_NTV2" id=wPopup >NTv2</A> grid files can exist in two forms, binary and ASCII. 
+In the initial implementation of NTv2 in Australia, the only version of a Grid Shift File that strictly adhered to the NTv2 file format was the ASCII version (States only distribute the binary form, but the ASCII equivalent is easily obtained from utilities such as GDAy and GDAit). The differences in the binary form are minor but the consequence is that there are two binary forms of an NTv2 file that are not compatible: an <b>Australian</b> version and a <b>Canadian</b> version.  </p>
+<p>
+Only the Canadian version is a true NTv2 file.  To eliminate confusion, use of Australian binary is being phased out, and Canadian binary will become the standard for Grid Shift File distribution in Australia.  The following information explains the difference between the two binary forms and outlines the reason why it occurred.</p>
+<p>&nbsp;</p>
+<UL>
+<H3><LI>What is the difference?</H3></LI>
+<p>
+The simple answer is that any integer value in a Canadian NTv2 binary file must be read as a 4 byte number followed by 4 bytes of padding.  Australian binary files DO NOT contain this padding, Canadian binary files do.  This affects three records in the Overview Header (NUM_OREC, NUM_SREC and NUM_FILE), and one record in each of the Sub-grid Headers (GS_COUNT).</p>
+<p>Considering this in more detail, an NTv2 file is comprised of an Overview Header and is followed by one or more Sub-grids.  This is represented in Figure 1.</p>
+<P>&nbsp;</P>
+<P class=proclabel>Figure 1 - NTv2 file structure</P>
+<p>
+<TABLE width=200>
+  <TR>
+    <TD>Overview Header</TD></TR>
+  <TR>
+    <TD>Sub-grid 1: Header</TD></TR>
+  <TR>
+    <TD>Sub-grid 1: Node values (shifts)</TD></TR>
+  <TR>
+    <TD>...</TD></TR>
+  <TR>
+    <TD>Sub-grid 'n': Header</TD></TR>
+  <TR>
+    <TD>Sub-grid 'n': Node values (shifts)</TD></TR></TABLE></p>
+<p>
+The Overview Header and each Sub-grid Header consist of 11 records of 16 bytes, i.e. each header is 176 bytes long.  The first 8 bytes of each record is a string identifier, the last 8 bytes contain the value of the identifier.  The value can be one of three data types: a double, a string or an integer.  A representation of how each data type is stored in an NTv2 header record is shown in Figure 2.</p>
+<p>&nbsp;</p>
+<P class="proclabel">Figure 2 Data storage in a Header record</P>
+<p>
+<TABLE>
+  <TR>
+    <TH>Data type</TH><TH>Identifier</TH><TH colspan=2>Value</TH></TR>
+  <TR>
+    <TD>Double</TD><TD>8 bytes</TD><TD colspan=2>8 bytes</TD></TR>
+  <TR>
+    <TD>String</TD><TD>8 bytes</TD><TD colspan=2>8 bytes</TD></TR>
+  <TR>
+    <TD>Integer</TD><TD>8 bytes</TD><TD>4 bytes</TD><TD>&nbsp;4 bytes (padding)</TD></TR></TABLE></p>
+<p>&nbsp;</p>
+<p>
+The padding used for integer values is 4 NULL characters 
+(ASCII character 0). The only purpose of the padding is to make a record with an 
+integer value 16 bytes long, all other data types will automatically have 
+records 16 bytes long. The records affected in the Overview Header (see Table 
+B.2 in Appendix B of GDAy User’s Guide) are NUM_OREC, 
+NUM_SREC and NUM_FILE. The record affected in 
+the Sub-grid Header (see Table B.3 in Appendix B of GDAy User’s Guide) is GS_COUNT.</p>
+<p>The format of the "Node Values" in  a Sub-grid is identical for both Australian and Canadian binary files, i.e. no padding is used.</p>
+<P>&nbsp;</P>
+<H3><LI>Why did the difference occur?</H3></LI>
+<p>
+Australian binary came into existence because it was believed that NTv2 binary was compiler dependent.  The Canadians had implemented it with FORTRAN and information at the time suggested that the use of records within a FORTRAN binary file would create a file that other development environments would have difficulty reading and writing.  Given that most software development today is done in a language other than FORTRAN, the decision was made to format the file as specified in Appendix B of the NTv2 Developers Guide (Junkins and Farley, 1995), but to ignore any auxiliary record identifiers that FORTRAN used.  At the time this was not considered to be a major issue.  A FORTRAN version of the grid file could easily be created for those who required it by using a FORTRAN utility to convert an ASCII version of the grid file to the binary form.  </p>
+<p>
+However it has now become apparent that NTv2 binary is not compiler dependent.  The justification for having an Australian version of the binary is no longer valid and retaining it will lead to further confusion in the future.  Ultimately, the best option is to abandon this version and adopt the Canadian implementation.</p>
+</UL>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>Prior to version 2.0 of GDAy, only NTv2 files in 
+  ASCII and Australian binary could be read. Version 2.0 and later are capable 
+  of reading NTv2 files in both Australian and Canadian binary files.
+  <LI>For more information about the NTv2 file format refer to Appendix B of 
+  GDAy User's Guide. </LI>
+</ul>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=bilinear_algorithm;ntv2_format;ntv2_export;ntv2_view_properties;ntv2_gridex;choose_ntv2_grid" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

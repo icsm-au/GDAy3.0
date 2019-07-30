@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>What you should know about datum and coordinates</title>
+<META NAME="MS-HAID" CONTENT="what_you_should_know">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_datum_coords">What you should know about datum and coordinates</a></h1>
+
+<p> Depending on the field of work you do, you may need additional information about datum and coordinates. The following information&nbsp;is a brief overview of coordinate&nbsp;system topics relevant to GDAy.</p>
+
+<table style="WIDTH: 80%">
+<tr valign=top>
+<th>Feature</th><th><b>Description</b></th></tr>
+<tr valign=top>
+<td><b>Datum</b></td><td>
+So that we can make calculations in relation the surface of the earth, we need to have a mathematical model, or reference system, that best approximates the earth’s shape. However, for this model to be of any practical use, we need to physically constrain its dimensions through survey observations and processing.<p>
+A Datum is the <i>physical</i> realisation of this model determined by survey observations made on the surface of the earth. Datum are therefore used to describe the earth’s size and shape, its point of origin and orientation. In reality, the earth is ellipsoidal in shape.</p>
+<p>
+<b>Locally defined datum</b> such as the <b>AGD</b> are based on a reference system that best fits the earth’s surface and shape in the selected region. A <b>geocentric</b> <b>datum </b>such as the <b>GDA</b> is a realisation of a reference system that has its centre coincident with the earth’s centre of mass (geocentre), thus producing a best fit for the entire globe.</p></td></tr>
+<tr valign=top>
+<td><b>Coordinate Systems</b></td>
+<td>
+There are three types of coordinate systems of interest when using GDAy. These are:<ul>
+<li>
+Cartesian Coordinates;        
+<li>
+Geographic Coordinates, and;        
+<li>
+Projection Coordinates.
+</li>
+</ul>The location of a point on the earth's surface may be described by any of these three types.
+</td>
+</tr>
+<tr valign=top>
+<td><b>Cartesian Coordinates</b></td><td>
+      The Cartesian coordinate system is a three-dimensional referencing 
+      system, whereby positioning in space is expressed in terms of X, Y and Z. 
+      The Z-axis is defined by the average position of the earth’s rotation 
+      axis, whilst the X-Y plane is the surface that cuts the globe at the 
+      equator. Earth centred cartesian coordinates are those whereby the 
+      coordinate system has its origin at the geocentre.<BR><BR>
+      Coordinates&nbsp;of this type are&nbsp;required when 
+      performing a conformal (7 - parameter) transformation.</td></tr>
+<tr valign=top>
+<td><b>Geographic Coordinates</b></td>
+<td>
+  This coordinate system is associated with an ellipsoid such that positioning on the earth’s surface is expressed in terms of latitude, longitude and ellipsoidal height. Therefore, the referencing of points on the surface is by means of angular measure from the equator (latitude), and from the Greenwich Meridian (longitude). </td>
+</tr>
+<tr valign=top>
+<td>
+   <b>Projection Coordinates</b></td>
+<td>
+Projection coordinates are a Universal Transverse Mercator (<b>UTM</b>) projection of geographic coordinates, and are expressed in terms of Easting, Northing and Zone. Projection coordinates, such as the Map Grid of Australia (<b>MGA</b>), allow us to simply reference points on the curved surface of the earth by means of a flat, two-dimensional surface.</td>
+</tr>
+</table>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+  <li>When using GDAy, 
+  you can readilty convert geographic coordinates to projection coordinates&nbsp;and vice versa.
+  <LI>For more information on converting between the different types, 
+  see Related Topics.</LI>
+</ul>
+<P>&nbsp;</P>
+<P><A id=relTopics href ="CHM =gday.chm META=coordinate_transformations;gda_definition;choose_coord_sys" >Related Topics</A></P>
+</BODY>
+</HTML>

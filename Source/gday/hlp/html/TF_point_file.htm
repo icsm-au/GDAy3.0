@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Transforming a points file</title>
+<META NAME="MS-HAID" CONTENT="file_tran_points_file">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<p class="proclabel"><a name="hid_file_tran_points_file">To transform a points file</a></p>
+<OL>
+<li>
+On the <B>File</B> menu, select <b>Transform Points File</b>.  
+<li>Click <b>Browse</b>.
+<li>In the <b>Look in</b> box, click the drive or folder that contains the input file.  
+<li>In the <b>Files of type</b> box, choose the appropriate input file-type (note: the available types include 
+  Formatted Text (*.dat, *.prn, *.txt), Comma Separated Files (*.csv) files), 
+  SCDB files (*.man), NEWGAN res files (*.res), and Queensland Interchange 
+  Format (*.qif).  
+<li>In the folder list, double-click folders until you 
+  open the folder that contains the required file.  
+<li>Double-click the input file you want to use.  
+<li>If you are transforming a file of geographic 
+  coordinates in degrees, minutes and seconds, select the appropriate radio 
+  button from the Input File Group. This radio button option is greyed when you 
+  are transforming SCDB files (*.man), NEWGAN Res files (*.res) or Queensland 
+  Interchange Format files (*.qif).  
+<li>Click <b>Save As</b>.  
+<li>Repeat steps 2 to 5 to select the output file.  
+<li>If you want to print a file of geographic coordinates 
+  in degrees, minutes and seconds, select the appropriate radio button from the 
+  Output File Group.  
+<li>Click <b>OK</b>.</li></OL>
+<P>&nbsp;</P>
+<P class=important>Important</P>
+<UL>
+  <LI>  Before attempting to transform  a file of coordinates, ensure that you have 
+  selected the right coordinate system parameters&nbsp;and that the input files correspond 
+  with the format selected.</LI></UL>
+<P CLASS="note">Notes</P>
+<UL>
+  <LI>If you are transforming a Queensland Interchange Format file (*.qif) and 
+  the coordinates to be printed to the output file are projection coordinates, 
+  you will be prompted to specify a zone for the output file. Specifying a 
+  unique zone will ensure that all transformed coordinates will be projected 
+  over a single zone, regardless of how far east and west the file 
+  spans.
+  <LI>
+After the file has been successfully transformed, you will be prompted to transform another file.
+If at least one point in the input file could not be transformed, or an error occurred in the 
+file-read/write process, a message box will be displayed to outline the problem that occurred. 
+This message box information and the input coordinates are printed to the <A href="LF_view.htm">Log File</A>. 
+  <LI>If any of the points 
+  within the file lie outside the limits of the distortion grid, they will be 
+  transformed using a 7-Parameter conformal transformation. In this case, the 
+  transformation parameters selected from the Select Distortion Grid dialog box 
+  will be used. For more information, see “Transformation Parameters” from 
+  Choosing a distortion grid file. 
+  <LI>For formatted text and comma separated files only, the corresponding 
+  interpolation accuracy values are printed at the end of each line in the 
+  output file. If the accuracy values could not be determined, 3 dashes: “ --- “ 
+  will be printed instead.
+  <LI>You can view the Log file by selecting <B>View 
+  Log File</B> on the <B>Tools</B>       menu.
+  <LI>If you want to transform latitudes and longitudes and the <b>Separated DMS fields</b> and <b>HP Notation</b> 
+  option is transparent, then you will have to go back to the <b>Coordinate System</b> dialog box to select the right 
+  coordinate type.</LI></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=choose_ntv2_grid;choosing_coordinate_system;conformal_trans_formula;bilinear_algorithm;dat_file_format;csv_file_format;format_geo_options;supported_file_types" 
+id=relTopics>Related Topics</A></P>
+</BODY>
+</HTML>

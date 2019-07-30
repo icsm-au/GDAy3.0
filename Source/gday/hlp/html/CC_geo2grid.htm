@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Geographic to projection formula</title>
+<META NAME="MS-HAID" CONTENT="geo_to_grid_formula">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_geo_to_grid_formula">Geographic to projection (spheroid to grid) formula</a></h1>
+<p>The formula used by GDAy to convert geographic coordinates of latitude, longitude and ellipsoidal height 
+(<a style="FONT-FAMILY: Symbol">f, l,</a><a style="FONT-FAMILY: Times New Roman"> <EM>h</EM></a>) to Transverse Mercator projection coordinates of easting, 
+northing and zone (E, N, zo) is Redfearn's formula (Redfearn, Empire Survey 
+Review, No. 69, 1948). The formula is accurate to better than 1mm in any zone of the <A href="SRC=html\popup.txt TOPIC=IDH_MGA" id=wPopup>MGA</A> and for all practical purposes may be regarded as exact.</p>
+<P>To evaluate Redfearn's formula the length of an arc of a 
+meridian, foot-point latitude, and the radius of curvature must be computed. The 
+formulae for these are shown in <A href="CC_prelimcalc.htm">Preliminary calculations</A>.</P>
+<OL>
+  <LI><h3>Easting</h3>  
+  <UL>
+  <P><IMG src="..\images\E1.gif" ><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\E2.gif"><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\E3.gif"><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\E4.gif"></P><P>&nbsp;</P></UL>
+  <LI><h3>Northing</h3>
+  <UL>
+  <P><IMG src="..\images\N1.gif" ><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\N2.gif"><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\N3.gif"><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\N4.gif"><BR><BR>&nbsp;&nbsp;&nbsp;
+  <IMG src="..\images\N5.gif"></P><P>&nbsp;</P>
+  <P>where:</P>
+  <UL>
+  <P><IMG src="..\images\t.gif" style="LEFT: 66px; TOP: 560px" ><BR><BR>
+  <P><IMG src="..\images\ko.gif"> is the central scale factor (0.9996)<BR><BR>
+  <P><IMG src="..\images\lamdao.gif"> is the longitude of the cental meridian in radians.</P></UL><P>&nbsp;</P></UL>
+  <LI><h3>Zone</h3> 
+  <UL>
+  <P><IMG src="..\images\zone.gif"><BR><BR>
+  <P>where:</P>
+  <UL>
+  <P>LweZ0 = Longitude of western edge of zone 0.<BR><BR>
+  Zw = Zone width.</P><P>&nbsp;</P></UL><P>&nbsp;</P></UL>
+  </LI></OL>
+<P class=important>Important</P>
+<UL>
+  <LI>Before you use the above formula, ensure that you have selected the correct reference 
+  ellipsoid in the preliminary calculations.</LI></UL>
+<P CLASS="note">Notes</P>
+<UL>       
+  <LI>For more information, see the topic <STRONG>Conversion between Ellipsoidal and Grid Coordinates</STRONG> in the <A href="http://www.anzlic.org.au/icsm/gdatm/" id=extUrl target=_new title=http://www.anzlic.org.au/icsm/gdatm/>GDA Technical Manual</A><SPAN class=printOnly>(http://www.anzlic.org.au/icsm/gdatm/)</SPAN>.
+  <LI>Grid convergence and scale factor are not required 
+  when using GDAy.</LI></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=preliminary_calculations;grid_to_geo_formula;geo_to_cart_formula;cart_to_geo_formula;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

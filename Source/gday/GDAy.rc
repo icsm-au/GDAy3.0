@@ -1,0 +1,1015 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GDAY_DIALOG DIALOGEX 0, 0, 407, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "GDAy Datum Transformations"
+MENU IDR_MAIN_MENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Station No:",IDC_PNUM_VAR,14,32,36,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_PT_NUMBER,53,31,51,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
+    GROUPBOX        "Input Coordinates",IDC_STATIC,4,53,155,103
+    RTEXT           "Latitude:",IDC_INPUT_VAR1,14,69,36,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_LAT_EAST,53,67,85,12,ES_MULTILINE | ES_AUTOHSCROLL
+    RTEXT           "Longitude:",IDC_INPUT_VAR2,11,85,39,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_LONG_NTH,53,83,85,12,ES_MULTILINE | ES_AUTOHSCROLL
+    RTEXT           "Zone:",IDC_INPUT_VAR3,23,100,27,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_ZONE,53,99,40,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "Datum:",IDC_STATIC,24,116,26,8,NOT WS_GROUP,WS_EX_RIGHT
+    LTEXT           "Geocentric Datum of Australia (GDA) 2020",IDC_IN_DATUM_DESC,53,116,96,17,NOT WS_GROUP
+    RTEXT           "Coordinates:",IDC_STATIC,10,135,40,8,NOT WS_GROUP,WS_EX_RIGHT
+    LTEXT           "Lorem Ipsum",IDC_IN_PROJ_DESC,53,135,78,17,NOT WS_GROUP
+    DEFPUSHBUTTON   "&Compute...",IDC_COMPUTE,166,79,51,16
+    GROUPBOX        "Output Coordinates",IDC_STATIC_GROUP_OUT,224,53,179,103
+    RTEXT           "Easting:",IDC_OUTPUT_VAR1,229,69,40,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_LAT_EAST2,272,67,84,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "+/-",IDC_STATIC,357,69,10,8,NOT WS_GROUP
+    EDITTEXT        IDC_PREC_LATEAST,370,67,20,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "m.",IDC_STATIC,392,69,8,8,NOT WS_GROUP
+    RTEXT           "Northing:",IDC_OUTPUT_VAR2,229,85,40,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_LONG_NTH2,272,83,84,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "+/-",IDC_STATIC,357,85,10,8,NOT WS_GROUP
+    EDITTEXT        IDC_PREC_LONGNORTH,370,83,20,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "m.",IDC_STATIC,392,85,8,8,NOT WS_GROUP
+    RTEXT           "Zone:",IDC_OUTPUT_VAR3,242,100,27,8,NOT WS_GROUP,WS_EX_RIGHT
+    EDITTEXT        IDC_ZONE2,272,99,39,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    RTEXT           "Datum:",IDC_STATIC,243,116,26,8,NOT WS_GROUP,WS_EX_RIGHT
+    LTEXT           "Lorem ipsum",IDC_OUT_DATUM_DESC,272,116,96,17,NOT WS_GROUP
+    LTEXT           "Map Grid of Australia (MGA 94)",IDC_OUT_PROJ_DESC,272,135,78,17,NOT WS_GROUP
+    RTEXT           "Coordinates:",IDC_STATIC,229,135,40,8,NOT WS_GROUP,WS_EX_RIGHT
+    CONTROL         IDB_GDA2020_LOGO,IDC_STATIC_LOGO,"Static",SS_BITMAP | SS_RIGHTJUST | SS_REALSIZEIMAGE,348,12,47,33,WS_EX_TRANSPARENT
+    GROUPBOX        "Point Numbering",IDC_PNUM_FRAME,4,19,155,30
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 167, 134
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About GDAy Datum Transformations"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         IDB_GDAY_LOGO,IDC_STATIC,"Static",SS_BITMAP,9,8,21,20
+    LTEXT           "GDAy Datum Transformations\n Version 3.0",IDC_STATIC,37,8,112,17,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "Software Development by Dr Roger Fraser, Simon Fuller\n\nTesting & Contributions from Nicholas Brown, Dan Jaksa\n",IDC_STATIC,9,43,151,57,SS_NOPREFIX | NOT WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,2,110,164,1
+    DEFPUSHBUTTON   "OK",IDOK,115,116,49,14
+END
+
+IDD_STATION_NAME DIALOG 0, 0, 152, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Enter a Station Name or Description"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Station Name:",IDC_STATIC,5,6,47,8
+    EDITTEXT        IDC_STATION_NAME,55,6,89,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,31,150,1
+    DEFPUSHBUTTON   "OK",IDOK,45,36,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,99,36,50,14
+END
+
+IDD_POINT_FILE DIALOGEX 0, 0, 199, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION
+CAPTION "Points File Transformation"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Input file",IDC_STATIC,3,5,27,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,34,10,164,1
+    LTEXT           "File name:",IDC_FILEIN,9,16,36,8
+    EDITTEXT        IDC_INPUT_FILENAME,9,26,130,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",IDC_INPUT_BROWSE,142,25,48,15
+    LTEXT           "For geographic input coordinates in dd° mm' ss"", use:",IDC_HP_IN,9,45,171,11
+    CONTROL         "Separated DMS fields",IDC_INPUT_SEP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,58,86,9
+    CONTROL         "HP Notation",IDC_INPUT_HP,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,118,58,57,9
+    LTEXT           "Output file",IDC_STATIC,3,77,34,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,39,82,159,1
+    LTEXT           "File name:",IDC_FILEOUT,9,89,38,8
+    EDITTEXT        IDC_OUTPUT_FILENAME,9,99,130,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Save As",IDC_OUTPUT_BROWSE,142,98,48,15
+    LTEXT           "For geographic output coordinates in dd° mm' ss"", use:",IDC_HP_OUT,9,118,171,11
+    CONTROL         "Separated DMS fields",IDC_OUTPUT_SEP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,130,86,9
+    CONTROL         "HP Notation",IDC_OUTPUT_HP,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,118,130,57,9
+    CONTROL         "&Write header to output file",IDC_OUTPUT_HEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,144,131,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,163,197,1
+    DEFPUSHBUTTON   "&Transform",IDOK,47,168,47,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,98,168,47,14
+    PUSHBUTTON      "&Help",ID_HELP,149,168,47,14
+END
+
+IDD_OPTIONS_LOGFILE DIALOG 0, 0, 209, 157
+STYLE DS_SETFONT | WS_VISIBLE | WS_CAPTION
+CAPTION "Log File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "File location",IDC_STATIC,4,4,38,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,47,8,161,1
+    LTEXT           "&Default file name:",IDC_STATIC,12,17,76,8
+    EDITTEXT        IDC_LOG_FILEPATH,12,27,133,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Change...",IDC_LOG_FILE_CHANGE,149,26,48,14
+    PUSHBUTTON      "&View",IDC_LOG_VIEW,149,43,48,14
+    LTEXT           "File header",IDC_STATIC,4,64,36,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,44,68,164,1
+    EDITTEXT        IDC_HEADER,12,77,185,70,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_HSCROLL
+END
+
+IDD_OPTIONS_OUTFILE DIALOG 0, 0, 209, 157
+STYLE DS_SETFONT | WS_VISIBLE | WS_CAPTION
+CAPTION "Interactive Output"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "File location",IDC_STATIC,4,4,38,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,47,8,161,1
+    LTEXT           "&Default file name:",IDC_STATIC,12,17,76,8,NOT WS_GROUP
+    EDITTEXT        IDC_OUTPUT_FILEPATH,12,27,133,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Change...",IDC_OUTPUT_FILE_CHANGE,149,26,48,14
+    CONTROL         "C&reate a new output file at start up",IDC_CREATE_OUTPUT_FILE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,46,120,8
+    LTEXT           "Station naming",IDC_STATIC,4,64,47,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,58,68,150,1
+    CONTROL         "Add &Station names",IDC_ADD_STN_NAME,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,12,77,93,8
+    CONTROL         "Pro&mpt for Station name",IDC_PROMPT_STN_NAME,"Button",BS_AUTORADIOBUTTON | WS_GROUP,12,92,87,8
+    CONTROL         "A&uto naming:",IDC_AUTO_NAME,"Button",BS_AUTORADIOBUTTON,121,92,57,8
+    LTEXT           "D&efault Station name:",IDP_DEFNAME,121,105,69,8,NOT WS_GROUP
+    EDITTEXT        IDC_CUSTOM_NAME,121,115,76,13,ES_AUTOHSCROLL
+END
+
+IDD_OPTIONS_VIEW DIALOG 0, 0, 209, 157
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_VISIBLE | WS_CAPTION
+CAPTION "View"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Show",IDC_STATIC,4,4,20,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,28,8,180,1
+    CONTROL         "&Point numbering",IDC_POINT_NUM,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,16,18,77,8
+    CONTROL         "&Auto increment",IDC_AUTO_INC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,114,18,73,8
+    LTEXT           "S&tart at:",IDP_STARTAT,126,30,30,8,NOT WS_GROUP
+    COMBOBOX        IDC_POINT_START_NUM,126,39,63,41,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Auto format",IDC_STATIC,4,57,38,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,46,61,162,1
+    CONTROL         "&Latitudes as ""positive south""",IDC_POS_SOUTH,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,16,71,107,8
+    CONTROL         "&Prefix geographic coordinates with ""N/S"" and ""E/W""",IDC_POS_NEG_FORMAT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,83,184,8
+    CONTROL         "&Degrees minutes and seconds values with symbols",IDC_DMS_FORMAT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,95,173,8
+    LTEXT           "Output coordinates precision",IDC_STATIC,4,112,92,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,101,116,107,1
+    LTEXT           "Geographic:",IDC_STATIC,16,124,43,8,NOT WS_GROUP
+    EDITTEXT        IDC_SECONDS_PREC,16,135,26,12,ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
+    CONTROL         "Spin1",IDC_SECONDS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,33,135,11,12
+    LTEXT           "&Minutes / Seconds",IDC_STATIC,48,136,63,9,NOT WS_GROUP
+    LTEXT           "Projection:",IDC_STATIC,137,124,36,8,NOT WS_GROUP
+    EDITTEXT        IDC_METRES_PREC,137,135,26,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_METRES_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS,153,135,11,12
+    LTEXT           "M&etres",IDC_STATIC,169,136,25,9,NOT WS_GROUP
+END
+
+IDD_COORDINATE_SYSTEM DIALOGEX 0, 0, 195, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Coordinate System"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Input Coordinates",IDC_STATIC,3,4,58,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,62,8,131,1
+    LTEXT           "Datum:",IDC_STATIC,11,19,22,10,NOT WS_GROUP
+    COMBOBOX        IDC_INPUT_DATUM,38,17,138,38,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Coordinates:",IDC_STATIC,11,35,47,8
+    LISTBOX         IDC_INPUT_PROJ,11,45,111,24,LBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    GROUPBOX        "Format",IDC_IN_FORMAT,128,33,55,48
+    CONTROL         "d.mmssss",IDC_IN_DMS,"Button",BS_AUTORADIOBUTTON | BS_LEFT | WS_GROUP,134,44,44,8
+    CONTROL         "d.mmmm",IDC_IN_DMIN,"Button",BS_AUTORADIOBUTTON | BS_LEFT,134,55,42,8
+    CONTROL         "d.dddd",IDC_IN_DDEG,"Button",BS_AUTORADIOBUTTON | BS_LEFT,134,66,36,8
+    LTEXT           "Output Coordinates",IDC_STATIC,3,88,62,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,67,92,126,1
+    LTEXT           "Datum:",IDC_STATIC,11,105,23,10,NOT WS_GROUP
+    COMBOBOX        IDC_OUTPUT_DATUM,38,103,138,37,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Coordinates:",IDC_STATIC,11,121,45,8
+    LISTBOX         IDC_OUTPUT_PROJ,11,131,111,24,LBS_NOINTEGRALHEIGHT | WS_TABSTOP
+    GROUPBOX        "Format",IDC_OUT_FORMAT,128,121,55,48
+    CONTROL         "d.mmssss",IDC_OUT_DMS,"Button",BS_AUTORADIOBUTTON | BS_LEFT | WS_GROUP,134,132,44,8
+    CONTROL         "d.mmmm",IDC_OUT_DMIN,"Button",BS_AUTORADIOBUTTON | BS_LEFT,134,143,44,8
+    CONTROL         "d.dddd",IDC_OUT_DDEG,"Button",BS_AUTORADIOBUTTON | BS_LEFT,134,154,44,8
+    CONTROL         "Prompt for output zone",IDC_OUTZONE_PROMPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,160,91,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,3,175,190,1
+    DEFPUSHBUTTON   "&OK",IDOK,49,181,45,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,98,181,45,14
+    PUSHBUTTON      "&Help",ID_HELP,147,181,45,14
+END
+
+IDD_POINT_FILE_ZONE DIALOGEX 0, 0, 135, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_CAPTION
+CAPTION "Output Zone"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Specify the output zone:",IDC_PROMPT,8,5,117,8
+    LTEXT           "Zone:",IDC_STATIC,8,23,20,9
+    EDITTEXT        IDC_PFILE_ZONE,34,21,27,12,ES_AUTOHSCROLL | ES_NUMBER | WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,42,133,1
+    DEFPUSHBUTTON   "&OK",IDOK,28,47,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,82,47,50,14
+END
+
+IDD_GRID_PROPERTIES DIALOG 0, 0, 209, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Transformation Grid Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "General",IDC_STATIC,4,4,27,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,34,9,174,1
+    LTEXT           "File name:",IDC_STATIC,12,19,33,10
+    EDITTEXT        IDC_FILENAME,47,17,149,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "File type:",IDC_STATIC,12,34,30,10
+    EDITTEXT        IDC_FILETYPE,47,32,64,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Version:",IDC_STATIC,12,48,27,10
+    EDITTEXT        IDC_VERSION,47,47,64,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "No. Sub-Grids:",IDC_STATIC,122,34,46,10
+    EDITTEXT        IDC_NUMSUBGRIDS,171,32,25,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Grid Limits",IDC_STATIC,4,68,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,42,72,166,1
+    LTEXT           "Sub-Grid Name:",IDC_STATIC,12,79,54,8
+    COMBOBOX        IDC_SUBGRID_NAME,12,88,62,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "North Latitude:",IDC_STATIC,86,80,48,8
+    EDITTEXT        IDC_NORTH_LAT,86,89,51,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "South Latitude:",IDC_STATIC,86,105,49,8
+    EDITTEXT        IDC_SOUTH_LAT,86,114,51,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "West Longitude:",IDC_STATIC,145,80,52,8
+    EDITTEXT        IDC_WEST_LONG,145,89,51,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "East Longitude:",IDC_STATIC,145,105,49,8
+    EDITTEXT        IDC_EAST_LONG,145,114,51,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Reference Systems",IDC_STATIC,4,134,65,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,70,138,138,1
+    LTEXT           "From:",IDC_STATIC,12,145,20,8
+    EDITTEXT        IDC_SYSTEM_FROM,12,154,40,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "To:",IDC_STATIC,86,145,12,8
+    EDITTEXT        IDC_SYSTEM_TO,86,154,40,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,4,176,204,1
+    DEFPUSHBUTTON   "&OK",IDOK,101,181,50,14
+    PUSHBUTTON      "&Help",ID_HELP,156,181,50,14
+END
+
+IDD_GRID_AND_PARAMS DIALOGEX 0, 0, 213, 165
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Transformation Grid"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "NTv2 Transformation Grid",IDC_STATIC,4,4,105,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,73,8,139,1
+    LTEXT           "File Name:",IDC_STATIC,12,18,40,8
+    EDITTEXT        IDC_GRID_FILENAME,12,28,135,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "&Browse...",IDC_GRID_BROWSE,151,27,50,15
+    RTEXT           "North Limit:",IDC_STATIC,15,49,37,8
+    RTEXT           "",IDC_NORTH,57,49,47,9
+    RTEXT           "South Limit:",IDC_STATIC,14,61,38,8
+    RTEXT           "",IDC_SOUTH,57,61,47,9
+    RTEXT           "West Limit:",IDC_STATIC,115,49,36,8
+    RTEXT           "",IDC_WEST,155,49,44,9
+    RTEXT           "East Limit:",IDC_STATIC,116,61,35,8
+    RTEXT           "",IDC_EAST,155,61,44,9
+    LTEXT           "Transformation Parameters",IDC_STATIC,4,79,86,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,93,83,119,1
+    LTEXT           "Parameters:",IDC_STATIC,14,94,40,8
+    COMBOBOX        IDC_PARAM,56,92,121,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Conformal transformation parameters are used only when a point lies outside the limits of the transformation grid.",IDC_STATIC,13,110,178,27
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,140,207,1
+    DEFPUSHBUTTON   "&OK",IDOK,55,147,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,108,147,50,14
+    PUSHBUTTON      "&Help",ID_HELP,161,147,50,14
+END
+
+IDD_POINT_DIR DIALOG 0, 0, 190, 229
+STYLE DS_SETFONT | DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Folder Transformation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Input Folder",IDC_STATIC,3,4,38,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,44,8,145,1
+    LTEXT           "Path:",IDC_DIRIN,9,15,36,8
+    EDITTEXT        IDC_INPUT_DIR,9,24,118,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "&Look in",IDC_DIR_LOOKIN,131,23,48,15
+    GROUPBOX        "Geographic format",IDC_IN_GEO_BOX,9,41,111,41
+    CONTROL         "Separated DMS fields",IDC_INPUT_SEP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,55,83,8
+    CONTROL         "HP Notation",IDC_INPUT_HP,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,15,67,57,8
+    GROUPBOX        "File format",IDC_IN_FILE_BOX,126,41,54,41
+    LTEXT           "Extension:",IDC_STATIC,134,53,38,8
+    COMBOBOX        IDC_INPUT_FORMAT,134,63,37,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "S&earch for files in all subfolders",IDC_RECURSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,88,170,8
+    LTEXT           "Output Folder",IDC_STATIC,3,104,44,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,50,108,139,1
+    LTEXT           "Path:",IDC_FILEOUT,9,115,38,8
+    EDITTEXT        IDC_OUTPUT_DIR,9,124,118,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Save in",IDC_DIR_SAVEIN,131,123,48,15
+    GROUPBOX        "Geographic format",IDC_OUT_GEO_BOX,9,141,111,41
+    CONTROL         "Separated DMS fields",IDC_OUTPUT_SEP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,154,86,9
+    CONTROL         "HP Notation",IDC_OUTPUT_HP,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,15,167,57,9
+    GROUPBOX        "File format",IDC_OUT_FILE_BOX,126,141,54,41
+    LTEXT           "Extension:",IDC_STATIC,134,153,38,8
+    COMBOBOX        IDC_OUTPUT_FORMAT,134,163,37,40,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Write header to dat/csv output files",IDC_OUTPUT_HEADER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,187,129,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,206,188,1
+    DEFPUSHBUTTON   "&Transform",IDOK,38,211,47,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,89,211,47,14
+    PUSHBUTTON      "&Help",ID_HELP,140,211,47,14
+END
+
+IDD_POINT_DIR_CREATEDIR DIALOG 0, 0, 337, 61
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_CAPTION
+CAPTION "Folder Transformation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "",IDC_ICONQUESTION,13,4,20,20
+    LTEXT           "The folder  Drive:\n\\folder\\subfolder\\filename.ext  was not found. Do you \nwish to create it?",IDC_DIR_PROMPT,43,4,286,25
+    CONTROL         "",IDC_SEPARATOR,"Static",SS_ETCHEDHORZ,1,38,335,1
+    DEFPUSHBUTTON   "&Yes",ID_YES,7,43,47,14
+    PUSHBUTTON      "Yes &All",ID_YESALL,62,43,47,14
+    PUSHBUTTON      "&No",ID_NO,117,43,47,14
+    PUSHBUTTON      "N&o All",ID_NOALL,172,43,47,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,43,47,14
+    PUSHBUTTON      "&Help",ID_HELP,282,43,47,14
+END
+
+IDD_PROGRESS DIALOG 0, 0, 271, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_CAPTION
+CAPTION "Transforming Folder..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,218,45,50,14
+    LTEXT           "",IDC_FILENAME,7,11,211,8
+    LTEXT           "",IDC_DIR_TO_DIR,7,21,263,8
+    CONTROL         "Progress1",IDC_DIR_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,45,203,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,40,269,1
+END
+
+IDD_GRID_DEFAULT_SELECT DIALOGEX 0, 0, 194, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GDAy - Choose a transformation grid?"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&Yes",IDOK,45,64,50,14
+    PUSHBUTTON      "&No",IDCANCEL,98,64,50,14
+    ICON            "",IDC_ICONQUESTION,8,4,20,20
+    LTEXT           "A default transformation grid has not been selected.\n\nWould you like to choose one now?",IDC_STATIC,41,4,146,40
+    CONTROL         "&Do not remind me again.",IDC_GRIDFILE_REMINDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,45,92,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_GDAY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 403
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 166
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_STATION_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 151
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_POINT_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 198
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_OPTIONS_LOGFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 208
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_OPTIONS_OUTFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 208
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_OPTIONS_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 208
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_COORDINATE_SYSTEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 193
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_POINT_FILE_ZONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 134
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_GRID_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 208
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_GRID_AND_PARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 212
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_POINT_DIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 189
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_POINT_DIR_CREATEDIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 336
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 57
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 270
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_GRID_DEFAULT_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 190
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 78
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0c0904b0"
+        BEGIN
+            VALUE "CompanyName", "Geoscience Australia"
+            VALUE "FileDescription", "GDAy Datum Transformations"
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "GDAy"
+            VALUE "LegalCopyright", "Creative Commons"
+            VALUE "OriginalFilename", "GDAy.EXE"
+            VALUE "ProductName", "GDAy Datum Transformations"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc09, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\GDAy.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_GDAY_ICON           ICON                    "res\\gday.ico"
+
+IDR_GDA                 ICON                    "res\\GDA.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_GDA_LOGO            BITMAP                  "res\\GDA Logo.bmp"
+
+IDB_GDAY_LOGO           BITMAP                  "res\\gday_logo.bmp"
+
+IDB_DNRM                BITMAP                  "res\\dnrmlogo.bmp"
+
+IDB_GDA2020_LOGO        BITMAP                  "res\\gda2020_logo_120w_90h.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS_VIEW DLGINIT
+BEGIN
+    IDC_POINT_START_NUM, 0x403, 2, 0
+0x0030, 
+    IDC_POINT_START_NUM, 0x403, 2, 0
+0x0031, 
+    IDC_POINT_START_NUM, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_POINT_START_NUM, 0x403, 4, 0
+0x3031, 0x0030, 
+    IDC_POINT_START_NUM, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    0
+END
+
+IDD_COORDINATE_SYSTEM DLGINIT
+BEGIN
+    IDC_INPUT_DATUM, 0x403, 41, 0
+0x6547, 0x636f, 0x6e65, 0x7274, 0x6369, 0x4420, 0x7461, 0x6d75, 0x6f20, 
+0x2066, 0x7541, 0x7473, 0x6172, 0x696c, 0x2061, 0x4728, 0x4144, 0x2029, 
+0x3931, 0x3439, "\000" 
+    IDC_INPUT_DATUM, 0x403, 41, 0
+0x6547, 0x636f, 0x6e65, 0x7274, 0x6369, 0x4420, 0x7461, 0x6d75, 0x6f20, 
+0x2066, 0x7541, 0x7473, 0x6172, 0x696c, 0x2061, 0x4728, 0x4144, 0x2029, 
+0x3032, 0x3032, "\000" 
+    IDC_OUTPUT_DATUM, 0x403, 41, 0
+0x6547, 0x636f, 0x6e65, 0x7274, 0x6369, 0x4420, 0x7461, 0x6d75, 0x6f20, 
+0x2066, 0x7541, 0x7473, 0x6172, 0x696c, 0x2061, 0x4728, 0x4144, 0x2029, 
+0x3931, 0x3439, "\000" 
+    IDC_OUTPUT_DATUM, 0x403, 41, 0
+0x6547, 0x636f, 0x6e65, 0x7274, 0x6369, 0x4420, 0x7461, 0x6d75, 0x6f20, 
+0x2066, 0x7541, 0x7473, 0x6172, 0x696c, 0x2061, 0x4728, 0x4144, 0x2029, 
+0x3032, 0x3032, "\000" 
+    0
+END
+
+IDD_POINT_DIR DLGINIT
+BEGIN
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x6164, 0x0074, 
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x7874, 0x0074, 
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x7270, 0x006e, 
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x7363, 0x0076, 
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x6971, 0x0066, 
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x616d, 0x006e, 
+    IDC_INPUT_FORMAT, 0x403, 4, 0
+0x6572, 0x0073, 
+    IDC_OUTPUT_FORMAT, 0x403, 4, 0
+0x6164, 0x0074, 
+    IDC_OUTPUT_FORMAT, 0x403, 4, 0
+0x7874, 0x0074, 
+    IDC_OUTPUT_FORMAT, 0x403, 4, 0
+0x7270, 0x006e, 
+    IDC_OUTPUT_FORMAT, 0x403, 4, 0
+0x7363, 0x0076, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENUEX
+BEGIN
+    POPUP "&File",                          65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        POPUP "Transformation &Grid Settings",  65535,MFT_STRING,MFS_ENABLED
+        BEGIN
+            MENUITEM "&Select New Grid File...",    IDM_FILE_GRIDFILE,MFT_STRING,MFS_ENABLED
+            MENUITEM "Grid &Properties...",         IDM_FILE_GRIDPROP,MFT_STRING,MFS_ENABLED
+            POPUP "&Export Grid File",              65535,MFT_STRING,MFS_ENABLED
+            BEGIN
+                MENUITEM "...to &Ascii",                IDM_FILE_EXPORTTOASCII,MFT_STRING,MFS_ENABLED
+                MENUITEM "...to &Binary",               IDM_FILE_EXPORTTOBINARY,MFT_STRING,MFS_ENABLED
+            END
+            MENUITEM MFT_SEPARATOR
+            MENUITEM "Run Grid &Extractor",         IDM_FILE_GRIDEX,MFT_STRING,MFS_ENABLED
+        END
+        MENUITEM MFT_SEPARATOR
+        POPUP "&Interactive Input",             65535,MFT_STRING,MFS_ENABLED
+        BEGIN
+            MENUITEM "&New Output File",            IDM_FILE_OUTPUT,MFT_STRING,MFS_ENABLED
+            MENUITEM "&View Output File",           IDM_FILE_VIEW,MFT_STRING,MFS_ENABLED
+        END
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "&Transform Points Files...",  IDM_FILE_TRANS_POINTSFILE,MFT_STRING,MFS_ENABLED
+        MENUITEM "Transform F&older...",        IDM_FILE_TRANS_DIRECTORY,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "E&xit\t Esc",                 IDCANCEL,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "&Transform",                     65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "GDA94 to GDA2020",            IDM_TRANSFORM_GDA94TOGDA20,MFT_STRING,MFS_ENABLED
+        MENUITEM "GDA2020 to GDA94",            IDM_TRANSFORM_GDA20TOGDA94,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "T&ools",                         65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&Coordinate System...",       IDM_TOOLS_COORD_SYSTEM,MFT_STRING,MFS_ENABLED
+        MENUITEM "&Options...",                 IDM_TOOLS_OPTIONS,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "View &Log File",              IDM_LOGFILEVIEW,MFT_STRING,MFS_ENABLED
+    END
+    POPUP "&Help",                          65535,MFT_STRING,MFS_ENABLED
+    BEGIN
+        MENUITEM "&Contents...",                ID_HELP_CONTENTS,MFT_STRING | MFT_RIGHTJUSTIFY,MFS_ENABLED
+        MENUITEM "&Index",                      ID_HELP_INDEX,MFT_STRING,MFS_ENABLED
+        MENUITEM "&Search",                     ID_HELP_SEARCH,MFT_STRING,MFS_ENABLED
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "&About GDAy 3.0",             IDM_HELP_ABOUTGDAY,MFT_STRING,MFS_ENABLED
+    END
+END
+
+IDR_STATUS_OUTFILE_POPUP MENU
+BEGIN
+    POPUP "StatusBar Popup (Output File)"
+    BEGIN
+        MENUITEM "&New Output File",            IDM_FILE_OUTPUT
+        MENUITEM "&View Output File",           IDM_FILE_VIEW
+    END
+END
+
+IDR_STATUS_GRID_POPUP MENU
+BEGIN
+    POPUP "StatusBar Popup (Grid tools)"
+    BEGIN
+        MENUITEM "&Select New Grid File...",    IDM_FILE_GRIDFILE
+        MENUITEM "Grid &Properties...",         IDM_FILE_GRIDPROP
+        POPUP "&Export Grid File"
+        BEGIN
+            MENUITEM "...to &Ascii",                IDM_FILE_EXPORTTOASCII
+            MENUITEM "...to &Binary",               IDM_FILE_EXPORTTOBINARY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Run Grid &Extractor",         IDM_FILE_GRIDEX
+    END
+END
+
+IDR_POPUP MENU
+BEGIN
+    POPUP "Main Dialog Popup"
+    BEGIN
+        MENUITEM "&Coordinate System...",       IDM_TOOLS_COORD_SYSTEM
+        MENUITEM "&Options...",                 IDM_TOOLS_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "View &Log File",              IDM_LOGFILEVIEW
+    END
+END
+
+IDR_VIEWLOG MENU
+BEGIN
+    POPUP "Log PopUp"
+    BEGIN
+        MENUITEM "View Log File",               IDM_LOGFILEVIEW
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_COORDINATE_SYSTEM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_POINT_FILE_ZONE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_GDAY_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_POINT_FILE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_GRID_AND_PARAMS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_GRID_DEFAULT_SELECT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_EXPORTTOASCII  " Exports the Binary transformation grid to ASCII format"
+    IDM_FILE_EXPORTTOBINARY " Exports the ASCII transformation grid to Binary format"
+    IDM_FILE_GRIDEX         " Activates the grid extraction tool"
+    IDM_FILE_GRIDFILE       " Selects the default transformation grid filepath and conformal transformation parameters"
+    IDM_FILE_GRIDPROP       " Displays the default transformation grid's properties"
+    IDM_FILE_OUTPUT         " Creates a new interactive output file"
+    IDM_FILE_TRANS_POINTSFILE " Transforms a file of coordinates"
+    IDM_FILE_VIEW           " Shows the current interactive output file"
+    IDM_HELP_ABOUTGDAY      " Displays the program information"
+    IDM_TOOLS_COORD_SYSTEM  " Changes the input and output datum, projection and coordinate format settings"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TOOLS_OPTIONS       " Edits the view, interactive output and log file settings"
+    IDM_TRANSFORM_GDA20TOGDA94 
+                            " Transfroms the input coordinates to GDA94 coordinates"
+    IDM_FILE_TRANS_DIRECTORY " Transforms a folder of coordinate files"
+    IDM_LOGFILEVIEW         " Shows the current transformation log file"
+    ID_HELP_SEARCH          " Searches the online documentation"
+    ID_HELP_CONTENTS        " Displays the table of contents for the online documentation"
+    IDM_TRANSFORM_GDA94TOGDA20 
+                            " Transfroms the input coordinates to GDA2020 coordinates"
+END
+
+STRINGTABLE
+BEGIN
+    ID_HELP_INDEX           " Displays the index to the online documentation"
+    IDS_TT_OUTDATUM         "MGA2020"
+    IDS_TT_INDATUM          "MGA94"
+    IDS_TT_READY            " Ready"
+    WM_THREADFINISHED       "Thread has Finished"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TT_GRIDFILE         "No grid file selected            "
+    IDS_TT_IDLEMESSAGE      " Press F1 for help"
+    IDS_TT_INTERACTIVEOUTPUT "GDAy Interactive Output.out   "
+    IDS_TT_NULL             " "
+END
+
+STRINGTABLE
+BEGIN
+    IDC_PARAM               "Conformal transformation parameters"
+    IDC_PFILE_ZONE          "UTM Projection zone for output coordinates"
+    IDC_POINT_NUM           "Shows / hides the point numbering edit box"
+    IDC_POINT_START_NUM     "Starts auto increment of point numbers at..."
+    IDC_POS_NEG_FORMAT      "Adds an alpha prefix to the input coordinates"
+    IDC_POS_SOUTH           "Forces all interactive input latitudes to be negative"
+    IDC_PREC_EAST           "Easting interpolation accuracy"
+    IDC_PREC_LAT            "Latitude interpolation accuracy"
+    IDC_PREC_LONG           "Longitude interpolation accuracy"
+    IDC_PREC_NORTH          "Northing interpolation accuracy"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_LAT2                "Latitude coordinate output"
+    IDC_LOG_FILE_CHANGE     "Changes the default log file name"
+    IDC_LOG_FILEPATH        "Default log file name"
+    IDC_LOG_VIEW            "Shows the current log file"
+    IDC_LONG2               "Longitude coordinate output"
+    IDC_METRES_PREC         "Specifies number of decimal places for output projection coordinates"
+    IDC_NORTH               "Northing coordinate input"
+    IDC_NORTH2              "Northing coordinate output"
+    IDC_NORTH_LAT           "Northern latitude limit (N_LAT)"
+    IDC_NUMSUBGRIDS         "Number of sub grids (NUM_FILE)"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_EAST                "Easting coordinate input"
+    IDC_EAST2               "Easting coordinate output"
+    IDC_EAST_LONG           "Eastern longitude limit (E_LONG)"
+    IDC_FILENAME            "Transformation grid filename"
+    IDC_FILETYPE            "Transformation grid filetype"
+    IDC_GRID_BROWSE         "Opens a new transformation grid"
+    IDC_GRID_FILENAME       "Default transformation grid filename"
+    IDC_HEADER              "Prints the items in the text box to the log file as a standard header"
+    IDC_LONG                "Longitude coordinate input"
+    IDC_DDEG                "d.dddd°"
+    IDC_DMIN                "d° mm.mm'"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_ADD_STN_NAME        "Adds a station name to every point in the interactive output file "
+    IDC_AUTO_INC            "Auto increments the point number on each transformation"
+    IDC_AUTO_NAME           "Automatically names every point with the default station name"
+    IDC_COMPUTE             "Click here to transform the input coordinates"
+    IDC_CREATE_OUTPUT_FILE  "Creates a new interactive output file each time GDAy is started"
+    IDC_CUSTOM_NAME         "Default station name for every point in the interactive output file"
+    IDC_DMS_FORMAT          "Adds symbols to geographic coordinates - ie. dd° mm' ss.ss"""
+END
+
+STRINGTABLE
+BEGIN
+    IDC_DMS                 "d° mm' ss"""
+    IDC_IN_FORMAT           "Format for geographic input coordinates"
+    IDC_INPUT_BROWSE        "Opens a new input file"
+    IDC_INPUT_DATUM         "Datum of input coordinates"
+    IDC_INPUT_FILENAME      "Filepath for input coordinates"
+    IDC_INPUT_HP            "Format of input coordinates is:   d.mmssss"
+    IDC_INPUT_PROJ          "Input coordinate type (Geographic / UTM Projection)"
+    IDC_INPUT_SEP           "Format of input coordinates is:   d mm ss.ssss"
+    IDC_LAT                 "Latitude coordinate input"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_OUTPUT_BROWSE       "Saves the output file as..."
+    IDC_OUTPUT_DATUM        "Datum of output coordinates"
+    IDC_OUTPUT_FILE_CHANGE  "Changes the default interactive output file"
+    IDC_OUTPUT_FILENAME     "Filepath for transformed output coordinates"
+    IDC_OUTPUT_FILEPATH     "Default interactive output file"
+    IDC_OUTPUT_HEADER       "Writes a header to all formatted text and CSV output files"
+    IDC_OUTPUT_HP           "Format output coordinates as:   d.mmssss"
+    IDC_OUTPUT_PROJ         "Output coordinate type (Geographic / UTM Projection)"
+    IDC_OUTPUT_SEP          "Format output coordinates as:   d mm ss.ssss"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_PROMPT_STN_NAME     "Prompts for station name each time compute is pressed"
+    IDC_PT_NUMBER           "Unique ID for each point in the interactive output file"
+    IDC_SECONDS_PREC        "Specifies number of decimal places for output geographic coordinates"
+    IDC_SOUTH_LAT           "Southern latitude limit (S_LAT)"
+    IDC_STATION_NAME        "Station name to be printed to the interactive output file"
+    IDC_SUBGRID_NAME        "Sub grid name (SUB_NAME)"
+    IDC_SYSTEM_FROM         "Local ellipsoid (SYSTEM_F)"
+    IDC_SYSTEM_TO           "Geocentric ellipsoid (SYSTEM_T)"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_VERSION             "Release name / date (VERSION)"
+    IDC_WEST_LONG           "Western longitude limit (W_LONG)"
+    IDC_ZONE                "UTM Projection Zone"
+    IDC_ZONE2               "UTM Projection Zone"
+    IDC_INPUT_FORMAT        "Search specified folder for files of type..."
+    IDC_OUTPUT_FORMAT       "Save all output files as type..."
+END
+
+STRINGTABLE
+BEGIN
+    IDC_INPUT_DIR           "Folder containing coordinate files to be transformed"
+    IDC_DIR_LOOKIN          "Selects the input folder"
+    IDC_DIR_SAVEIN          "Selects the output folder"
+    IDC_OUTPUT_DIR          "Output folder for transformed coordinate files"
+    IDC_RECURSE             "Searches the specified folder and all its subfolders"
+END
+
+STRINGTABLE
+BEGIN
+    IDCANCEL                " Exits the application"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_GRIDFILE_REMINDER   "Prompt when a grid file has not been selected each time GDAy is run."
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\GDAy.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

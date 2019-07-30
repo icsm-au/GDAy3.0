@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Output zone</title>
+<META NAME="MS-HAID" CONTENT="output_zone">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_output_zone">Output zone</a></h1>
+<p>When computing UTM <A href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup>projection coordinates</A>, you have the option to either specify a zone or accept the value computed by GDAy. </p>
+<P>Unlike <A href="SRC=html\popup.txt TOPIC=IDH_GEOGRAPHIC" id=wPopup>geographic coordinates</A>, projection coordinates are not unique and must be accompanied by a zone value. 
+For a UTM projection, the zones of developable surface are 6° wide and extend 
+from 80° south of the equator up to 80° to the north. 
+The origin of each zone is at the intersection of the equator and the 
+central meridian of the developable surface. This origin for each zone is 
+given a ‘false’ easting and northing (500 000E, 10 000 000N) to eliminate the rise of negative coordinates 
+when working in the Southern Hemisphere.</P>
+<P>For the 60 zones that are developed around the world, it is 
+possible to have equal values of eastings and northings for completely 
+different points. Therefore, it is necessary to specify a zone in 
+which the projection coordinates lie. For the extent of mapping in the 
+Australian region the zone numbers of 47 through to 58 are used, however only 
+zones 49 to 56 are required to map the entire landmass.</P>
+</BODY>
+</HTML>

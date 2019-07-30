@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<title>Transforming files</title>
+<META NAME="MS-HAID" CONTENT="file_transformation_overview">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<a name="hidd_file_transformation_overview"></a><FONT 
+size=2>
+<b>Transforming files</b> </FONT>
+
+<p>
+For successful file transformations, GDAy requires a structured format relating to 
+each file type. This format relates to both the coordinate system parameters and 
+how the data is stored within the file. For *.dat, *.txt or *.prn, *.csv, *.res and 
+*.qif files, a file of points will not be transformed if the coordinates within the 
+input file do not match the input coordinate system information displayed on the main 
+dialog. For example, if you have selected “Map Grid of Australia (MGA94)” from the 
+<b>Coordinate System</b> dialog box, you must select a file that has coordinates of 
+this type. A good habit to get into is to label the input and output files according 
+to the type of coordinates that are stored within them.</p>
+
+<p>
+If you are transforming a *.man file, you only need to ensure that the input and output 
+<b>Datum</b> parameters are correct. Since *.man files contain both coordinate types 
+(ie. latitude &amp; longitude; and easting, northing &amp; zone), only the latitude 
+and longitude are read from the input file. When the coordinates have been transformed, 
+both the latitude &amp; longitude; and easting, northing &amp; zone are printed to the file.</p>
+
+<P>Where a different output file type is required to the input file type, GDAy 
+supports the following file conversions:</P>
+
+<P>
+<TABLE>
+  <TR vAlign=top>
+    <TH><B>Input file</B>
+    <TH><B>Output file </B></TD>
+  <TR vAlign=top>
+    <TD>*.dat, *.prn, or *.txt</TD>
+    <TD>*.csv (Comma Separated File) </TD></TR>
+  <TR vAlign=top>
+    <TD>*.csv</TD>
+    <TD>*.dat, *.prn, or *.txt (Formatted Text Files) </TD></TR>
+  <TR vAlign=top>
+    <TD>*.man</TD>
+    <TD>*.csv (Comma Separated File) </TD></TR>
+  <TR vAlign=top>
+    <TD>*.man</TD>
+    <TD>*.dat, *.prn, or *.txt (Formatted Text Files) </TD></TR>
+  <TR vAlign=top>
+    <TD>*.res</TD>
+    <TD>*.csv (Comma Separated File) </TD></TR>
+  <TR vAlign=top>
+    <TD>*.res</TD>
+    <TD>*.dat, *.prn, or *.txt (Formatted Text Files) </TD></TR></TABLE></P>
+<P>&nbsp;</P>
+
+<P> When transforming files using GDAy, you have three options:</P>
+
+<UL>
+  <li><A href="TF_point_file.htm">Transform a points file</A>
+  <li><A href="TF_multiple_files.htm">Transform multiple files in a folder</A>
+  <li><A href="TF_directories.htm">Transform multiple folders of files</A></li>
+</UL>
+</BODY>
+</HTML>

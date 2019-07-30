@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Transforming coordinates</title>
+<META NAME="MS-HAID" CONTENT="coordinate_transformations">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html;charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hidd_cordinate_transformations">Transforming coordinates overview</a></h1>
+<P>
+When using GDAy, 
+there are three main steps to transforming coordinates. Click on the 
+steps below: </P>
+<P><b>1.&nbsp;&nbsp;</b><A class=expandToggle href="#" id=expand>Select the distortion grid file</A></P>
+<DIV class=expand>
+<P>When you want to transform coordinates from one datum to another, the recommended approach is to perform a high 
+accuracy grid transformation, or <STRONG>distortion modelling</STRONG>: the process of interpolating known correction values 
+from a grid file. GDAy incorporates this method by using an <A href="SRC=html\popup.txt TOPIC=IDH_NTV2" id=wPopup>NTv2</A>
+distortion grid file. For more information, see <A href="DT_interpolation_formula.htm">High accuracy grid transformation</A>.</P>
+<P>To ensure that you will be achieving the most accurate coordinate transformations as possible, you need to select a distortion grid 
+that covers an area your points are within.</P>
+<P>To select a distortion grid, see <A href="TC_choose_grid.htm">Choosing a distortion grid file</A>.</P>
+<p class="note"> Notes</p>
+<ul>
+<li>The Setup program will allow you to select the latest 
+  version of the Queensland Distortion Grid (QLD_0900.gsb) as the default grid. 
+  If you choose not to use the Queensland Distortion Grid during Setup, when you 
+  run GDAy for the first time you will need to select the desired grid file that 
+  covers your area of interest. 
+  <LI>Once an appropriate distortion grid file has been selected, this file will 
+  remain as the default distortion grid until you select a new file 
+  location.</LI>
+</ul>
+<P><A href="META=ntv2_binary_files;ntv2_format;bilinear_algorithm;conformal_parameters" id=relTopics>Related Topics</A></P></DIV>
+<P><b>2.&nbsp;&nbsp;</b><A class=expandToggle href="#" id=expand>Select the input and output coordinate system parameters</A></P>
+<DIV class=expand>
+<P>In broad terms, datum transformations facilitate the 
+conversion of coordinates from one <A href="SRC=html\popup.txt TOPIC=IDH_DATUM" id=wPopup>datum</A> to another. The 
+process is dependent on a mathematical relationship, which can be thought of as 
+the spatial difference between two different datum of interest. In practice, the 
+relationship is computed from the difference between two coordinate sets based 
+on the respective datum. GDAy supports the transformation of coordinates based 
+on the <A href="SRC=html\popup.txt TOPIC=IDH_GDA" id=wPopup>GDA</A>.</P>
+<P>Similarly, if you require the conversion of coordinates 
+from <A href="SRC=html\popup.txt TOPIC=IDH_GEOGRAPHIC" id=wPopup>geographic</A> to <A href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup>projection</A>, you will 
+also need to select the appropriate input and output coordinate types. 
+Converting coordinates from one type to 
+another on the same datum does not require a distortion grid.</P>
+<P>To select&nbsp;the appropriate input and output coordinate system settings, see <A href="TC_choose_coord_sys.htm">Choosing the right coordinate system parameters</A>.</P>
+<p class="note"> Notes</p>
+<ul>
+<li>Due to the spatial difference between GDA94 and 
+  GDA2020, it is imperitive that you select the appropriate input and 
+  output datum.
+  <LI>Once you have selected the input and output coordinate system parameters, 
+  GDAy will retain these settings until you decide to select new settings. 
+</LI>
+</ul>
+<P><A href="CHM =gday.chm META=gda_definition;what_you_should_know" id=relTopics>Related Topics</A></P>
+</DIV>
+<P><b>3.&nbsp;&nbsp;</b><A class=expandToggle href="#" id=expand>Performing a coordinate transformation</A></P>
+<DIV class=expand>
+<P>GDAy enables you to transform coordinates using two ways: 
+<STRONG>Interactive transformations</STRONG> and <STRONG>File transformations</STRONG>.</P>
+<DL>
+  <DT><B>Interactive transformations</B>
+  <DD>Transforming coordinates using this method 
+  is performed on the main GDAy dialog and can be used to transform a 
+  single point or a small list of points. Simply enter the coordinate values for 
+  your points into the input edit boxes on the left hand side of 
+  the main GDAy dialog and press <STRONG>Compute</STRONG>. The transformed 
+  coordinates will then be displayed in the output edit boxes on the right. 
+  <DD><P>To transform coordinates using this method, see <A href="TC_trans_single_point.htm">Transforming a single point</A>.</P>
+  <DT><STRONG>File transformations</STRONG>
+  <DD>  Transforming coordinates using this method requires 
+  the list of points you wish to transform to be placed in a file using a 
+  structured format. If you are working with large numbers of files of the same 
+  file format, you may choose to transform multiple files or whole folders 
+  of files in one sinle step. There are several options for transforming files 
+  of coordinates, each of which will require you to be aware of the coordinate 
+  system parameters and the type of file you are working with. 
+  <DD><P>To transform a file of coordinates, see <A href="TF_overview.htm">    Transforming Files</A>.</P></DD>
+  </DL>
+<P class="important">Important</P>
+<UL>
+  <LI>Before attempting to transform coordinates using either of these methods, ensure that you have selected the right coordinate system parameters outlined in Step 2. above.</LI>
+</UL>
+<P><A href="CHM=concepts.chm;aclui.chm;ntshrui.chm;encrypt.chm META=a_workstation_security;a_acl_file_permissions;a_acl_folder_permissions;a_ntshrui_permissions;a_encrypt_overview;a_encrypt_recovery_overview" 
+id=relTopics>Related Topics</A></P></DIV>
+</BODY>
+</HTML>
