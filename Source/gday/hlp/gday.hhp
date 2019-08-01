@@ -1,0 +1,141 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=gday.chm
+Contents file=gday.hhc
+Index file=gday.hhk
+Default Font=Tahoma,8,0
+Default Window=default
+Default topic=html\Default.htm
+Display compile progress=Yes
+Error log file=log.log
+Full-text search=Yes
+Language=0xc09 English (Australia)
+Title=GDAy Help
+
+[WINDOWS]
+default="GDAy 3.0","gday.hhc","gday.hhk","html\Default.htm","html\Default.htm",,,,,0x61520,,0x10387e,[279,11,1140,787],0x80000,,,,,,0
+
+[ALIAS]
+HIDD_GDAY_DIALOG = html\Default.htm
+HIDD_ABOUTBOX = html\EULA_license_agreement.htm
+HIDD_COORDINATE_SYSTEM = html\TC_choose_coord_sys.htm
+HIDD_GRID_AND_PARAMS = html\TC_choose_grid.htm
+HIDD_GRID_DEFAULT_SELECT = html\TC_choose_grid.htm
+HIDD_GRID_PROPERTIES = html\NTV2_view_grid_prop.htm
+HIDD_OPTIONS_LOGFILE = html\LF_options.htm
+HIDD_OPTIONS_OUTFILE = html\IO_options.htm
+HIDD_OPTIONS_VIEW = html\GUI_options_overview.htm
+HIDD_POINT_DIR = html\TF_directories.htm
+HIDD_POINT_DIR_CREATEDIR = html\TF_directories.htm
+HIDD_POINT_FILE = html\TF_overview.htm
+HIDD_POINT_FILE_ZONE = html\TF_multiple_files.htm
+HIDD_STATION_NAME = html\IO_station_naming.htm
+
+[FILES]
+html\CC_cart2geo.htm
+html\CC_geo2cart.htm
+html\CC_geo2grid.htm
+html\CC_grid2geo.htm
+html\CC_prelimcalc.htm
+html\coUA.css
+html\coUAprint.css
+html\Default.htm
+html\DT_7par_formula.htm
+html\DT_gda_spec.htm
+html\DT_interpolation_formula.htm
+html\EULA_license_agreement.htm
+html\FF_csv_files.htm
+html\FF_format_options.htm
+html\FF_supported_types.htm
+html\FF_text_files.htm
+html\GM_file_menu.htm
+html\GM_help_menu.htm
+html\GM_tools_menu.htm
+html\GM_transform_menu.htm
+html\GS_run_GDAY.htm
+html\GS_what_you should_know.htm
+html\GS_whats_displayed.htm
+html\GS_whats_new.htm
+html\IO_print.htm
+html\IO_settings.htm
+html\IO_station_naming.htm
+html\IO_view.htm
+html\IO_options.htm
+html\IO_new.htm
+html\LF_header.htm
+html\LF_options.htm
+html\LF_print.htm
+html\LF_settings.htm
+html\LF_view.htm
+html\NTV2_about_binary.htm
+html\NTV2_about_format.htm
+html\NTV2_export_grid.htm
+html\NTV2_extract_grid.htm
+html\NTV2_view_grid_prop.htm
+html\shared.js
+html\TC_choose_coord_sys.htm
+html\TC_choose_grid.htm
+html\TC_trans_single_point.htm
+html\TC_overview.htm
+html\TF_directories.htm
+html\TF_multiple_files.htm
+html\TF_overview.htm
+html\TF_zone.htm
+html\TF_point_file.htm
+html\UI_auto_format.htm
+html\UI_output_precision.htm
+html\UI_pt_number.htm
+html\DEF_topic_not_found.htm
+html\GUI_options_overview.htm
+html\UI_options.htm
+images\search.gif
+images\blueblackcurve.gif
+images\caution.gif
+images\clickhere.gif
+images\elle.gif
+images\elle_rtl.gif
+images\empty.gif
+images\Figure1.gif
+images\Figure2.gif
+images\gbullet.gif
+images\gday.gif
+images\gday_ui.gif
+images\greenblackcurve.gif
+images\help_index.gif
+images\help_search.gif
+images\help_toc.gif
+images\hlp.gif
+images\hlp_small.gif
+images\important.gif
+images\index.gif
+images\minusCold.gif
+images\minusHot.GIF
+images\mtsol_sl.gif
+images\nextCold.gif
+images\nextHot.gif
+images\note.gif
+images\obullet.gif
+images\orangeblackcurve.gif
+images\plusCold.gif
+images\plusHot.GIF
+images\previousCold.gif
+images\previousHot.gif
+images\bbullet.gif
+images\shortcut.gif
+images\shortcutCold.gif
+images\shortcutHot.gif
+images\squarebulletgreen.gif
+images\tip.gif
+images\toc.gif
+images\warning.gif
+images\webhelparrow.gif
+
+[MAP]
+#include HTMLDefines.h
+
+[TEXT POPUPS]
+HTMLDefines.h
+
+[INFOTYPES]
+

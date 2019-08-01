@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Log file options</title>
+<META NAME="MS-HAID" CONTENT="log_file_options">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_log_file_options">Log file options</a></h1> 
+<P>Each time you start GDAy, the <B>Default file name</B> for the log file is 
+used to create a new file, or if the file exists, clear the file’s contents 
+ready for logging. The purpose of this log file is to document particular items 
+pertinent to user operation and individual coordinate transformations. For 
+example, the input and output coordinate system parameters and the distortion 
+grid file are logged by default each time you start GDAy. </P>
+<P>Each time you press <B>Compute</B> on the main GDAy dialog, any errors that 
+occurred (such as a point being outside the limits of the selected distortion 
+grid file) are logged using the input coordinates and a short message. Whenever 
+you perform a points file transformation, the input and output file names are 
+logged. If there are any errors that occurred (such as a point being outside the 
+limits of the selected distortion grid file, or when the coordinates can not be 
+read from the file) they are logged using the input coordinates and a short 
+message.</P>
+<p>To personalise the log file created when using GDAy, you 
+can add a header of information to the log file by adding text to the <b>Add header to log file</b> text box. Each time you start 
+GDAy, or choose a new <b>Default file name</b>, the text 
+displayed in this box is printed at the start of the file.</p>
+<P>For information on how to modify the various log file options, choose from one of the following:</P>
+<UL>
+  <LI><A href="LF_settings.htm">  Change the default file path</A>
+  <LI><A href="LF_header.htm">Modify the log file header</A></LI>
+</UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=log_file_view;log_file_print;io_file_options;gday_ui_options" id=relTopics>Related Topics</A></P></BODY>
+</HTML>

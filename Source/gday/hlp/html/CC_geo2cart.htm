@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Geographic to cartesian formula</title>
+<META NAME="MS-HAID" CONTENT="geo_to_cart_formula">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_geo_to_cart_formula">Geographic to cartesian (spheroid to earth centred XYZ) formula</a></h1>
+<p>The formula used by GDAy to convert geographic coordinates of latitude, longitude and ellipsoidal height 
+(<a style="FONT-FAMILY: Symbol">f, l,</a> h) to three dimensional, earth-centred cartesian coordinates of X,&nbsp;Y and&nbsp;Z is Bowring's formula (Bowring,&nbsp;1985).</p>
+<P>           
+To evaluate Bowring's formula the radius of curvature must be computed. The 
+formulae for these are shown in <A href="CC_prelimcalc.htm">Preliminary calculations</A>.</P>
+<OL>
+  <LI><h3> X-coordinate</h3>  
+  <UL>
+  <P><IMG src="..\images\x.gif" ></P><P>&nbsp;</P></UL>
+  <LI><h3> Y-coordinate</h3>
+  <UL>
+  <P><IMG src="..\images\y.gif" ></P><P>&nbsp;</P></UL>
+  <LI><h3> Z-coordinate</h3> 
+  <UL>
+  <P><IMG src="..\images\z.gif"></P><P>&nbsp;</P></UL>
+  </LI></OL>
+<P>&nbsp;</P>
+<P class=important>Important</P>
+<UL>
+  <LI>Before&nbsp;you&nbsp;use the above formula, ensure that you have selected the correct reference 
+  ellipsoid in the preliminary calculations.</LI></UL>
+<P CLASS="note">Notes</P>
+<UL>       
+  <LI>For more information, see the topic <STRONG>Conversion between Geographical and Cartesian Coordinates</STRONG> in the <A href="http://www.anzlic.org.au/icsm/gdatm/" id=extUrl target=_new title=http://www.anzlic.org.au/icsm/gdatm/>GDA Technical Manual</A><SPAN class=printOnly>(http://www.anzlic.org.au/icsm/gdatm/)</SPAN>.
+  <LI>Although this method of coordinate transformation 
+  requires a valid ellipsoidal height, you are not prompted to enter 
+  in any such value when using GDAy. Where&nbsp;this cocomputation is performed, 
+  an ellipsoidal height of zero (0) is used by default.</LI></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=preliminary_calculations;cart_to_geo_formula;geo_to_grid_formula;grid_to_geo_formula;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

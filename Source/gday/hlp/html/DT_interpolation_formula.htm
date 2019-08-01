@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>High accuracy grid transformation</title>
+<META NAME="MS-HAID" CONTENT="bilinear_algorithm">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_bilinear_algorithm">High accuracy grid transformation</a></h1>
+<p>Using the appropriate distortion grid 
+for your area, this is the most accurate method of transforming 
+coordinates between the GDA94 and GDA2020 in Australia. The process is simple and 
+efficient, and yields unique transformation results that provide a sufficient level of confidence and 
+rigour.</p>
+<P>This method of datum transformation, also known as distortion modelling, incorporates a distortion grid file in the 
+<A href="SRC =html\popup.txt TOPIC=IDH_NTV2" id=wPopup>NTV2</A> format. Each grid 
+file is comprised of a structured array of nodes containing coordinate shifts and their associated accuracy. The 
+coordinate shifts for each node are comprised of a 
+<A href="DT_7par_formula.htm" title="Click to view more information" >conformal transformation</A> component 
+(ie. between the two datum of interest) and a <STRONG>distortion component</STRONG>. The
+distortion component is computed via complex mathematical processing 
+between two coordinate sets (based on the datum of interest) and as a result, 
+represents an estimated value of distortion in the original coordinate set at the 
+location of the grid node. The accuracy can be thought of as a value 
+of reliability for each shift, which is derived from the processing of 
+the coordinate sets. Essentially they describe the measure of quality of 
+the coordinate shifts in terms of their ability to model the actual 
+distortion for that area.</P>
+<P> In each grid file, the values for each node in 
+the grid consist of a latitude shift, a longitude shift, a latitude 
+accuracy and a longitude accuracy. If the distortion component at the node can not 
+be modeled during the processing of the coordinate sets, then the shift 
+value contains a conformal transformation component only. When this occurs, both of 
+the accuracy values are set to -1. These nodes can still be used in the interpolation 
+of coordinate shift values, however it is not possible to interpolate the 
+accuracy of the shifts. </P>
+<P>&nbsp;</P>
+<P class=proclabel>Transformation algorithm</P>
+<P>When a datum transformation is performed, three steps are involved. These are as follows:</P>
+<OL>
+<LI><P class=proclabel>Sub grid determination</P>
+<P>This step is performed to ensure that the point to be 
+  transformed lies within the grid, and if so, determine which sub grid to 
+  interpolate the coordinate shifts from. The objective is therefore to achieve 
+  a single sub grid that completely encloses the interpolation point, 
+  having no densified sub grids whose limits also enclose the point. In the instances where the distortion grid has only one single sub grid this process is elementary.</P>
+  <P>When using GDAy, if the point does not lie in any of the sub grids, 
+  then a grid transformation is not performed. Instead, you will be 
+  prompted to continue with a conformal transformation.</P>
+<P> &nbsp;</P>
+<LI><P class=proclabel>Retrieval of grid node shifts</P>
+<P> If the point does lie within the grid, the location of the point (p) with respect to the gridded array is calculated. This information is 
+then used to retrieve the coordinate shifts from the grid file for 
+the four nearest nodes in the array. The concept is shown in Figure 1.</P>
+<P>&nbsp;</P>
+<P class=proclabel>Figure 1 - Grid node selection</P>
+<P><a><IMG alt="Concept of coordinate shift selection from an array of grid nodes" border=0 src="..\images\gridnodeselection.gif" ></a></P>
+<P>&nbsp;</P>
+<P>The formula to calculate node A, which nodes B, C and D are based 
+on, is given by:</P>
+<P>&nbsp;</P>
+<OL>
+<a><IMG alt="Node A: The lower right hand node surrounding the interpolation point" border=0 src="..\images\nodeA.gif" ></a>
+<P>&nbsp;</P>where:
+<OL>
+<a><IMG alt="Number of columns in grid (N)" border=0 src="..\images\nodeN.gif" ></a><BR>
+<a><IMG alt="Row index of interpolation point (i)" border=0 src="..\images\row_i.gif" ></a><BR>
+<a><IMG alt="Column index of interpolation point (j)" border=0 src="..\images\column_j.gif" ></a>
+</OL>
+</OL>
+<P>&nbsp;</P>
+<P> Once the four nodes ave been calculated, the coordinate 
+shifts for nodes A, B, C and D are extracted from the file by adding the respective node values to the record index, or byte offset, of the first node 
+within the file. Knowing the exact location of each node within the file therefore allows immediate access and retrieval of the coordinate shift values.</P>
+<P> &nbsp;</P>
+<LI><P class=proclabel>Bi-linear interpolation and output</P>
+<P>    Once the coordinate shifts have 
+  been retrieved for the four nodes A, B, C and D the coordinate shift for point 
+  (p) is computed using bi-linear interpolation. The latitude (<FONT face=Symbol size=3>f</FONT>) coordinate shift for point (p) is interpolated by:</P>
+  <P>&nbsp;</P>
+  <OL><FONT size=2><FONT size=3 face=Symbol>df</FONT><SUB>P</SUB> = 
+  
+  a<SUB>0</SUB> + a<SUB>1</SUB>X + a<SUB>2</SUB>Y + a<SUB>3</SUB>XY</FONT>
+    <P></P>
+    <P>where:</P>
+    <UL>
+      <p><FONT size=2>a<SUB>0</SUB> = <FONT face=Symbol size=3>df</FONT><SUB>A</SUB></FONT></p>
+      <p><FONT size=2>a<SUB>1</SUB> = <FONT face=Symbol size=3>df</FONT><SUB>B</SUB> - <FONT face=Symbol size=3>df</FONT><SUB>A</SUB></FONT></p>
+      <p><FONT size=2>a<SUB>2</SUB> = <FONT face=Symbol size=3>df</FONT><SUB>D</SUB> - <FONT face=Symbol size=3>df</FONT><SUB>A</SUB></FONT></p>
+      <p><FONT size=2>a<SUB>3</SUB> = <FONT face=Symbol size=3>df</FONT><SUB>A</SUB> + <FONT face=Symbol size=3>df</FONT><SUB>C</SUB> - <FONT face=Symbol size=3>df</FONT><SUB>B</SUB> - <FONT face=Symbol size=3>df</FONT><SUB>D</SUB></FONT></p>
+    </UL>
+    <P>and:</P>
+    <UL>
+      <p><FONT size=2>X = (<FONT face=Symbol size=3>l</FONT><SUB>P</SUB> - <FONT face=Symbol size=3>l</FONT><SUB>A</SUB>) / (<FONT face=Symbol size=3>l</FONT><SUB>B</SUB> - <FONT face=Symbol size=3>l</FONT><SUB>A</SUB>)</FONT></p>
+      <p><FONT size=2>Y = (<FONT face=Symbol size=3>f</FONT><SUB>P</SUB> - <FONT face=Symbol size=3>f</FONT><SUB>A</SUB>) / (<FONT face=Symbol size=3>f</FONT><SUB>C</SUB> - <FONT face=Symbol size=3>f</FONT><SUB>A</SUB>)</FONT></p>
+      <p><FONT size=2><FONT face=Symbol size=3>f</FONT><SUB>A</SUB> = 
+  <FONT face=Symbol size=3>f</FONT><SUB>Lower</SUB> + (i - 1) * <FONT face=Symbol size=3>Df</FONT></FONT></p>
+      <p><FONT size=2><FONT face=Symbol size=3>l</FONT><SUB>A</SUB> = 
+  <FONT face=Symbol size=3>l</FONT><SUB>Lower</SUB> + (i - 1) * <FONT face=Symbol size=3>Dl</FONT></FONT></p>
+      <p><FONT size=2><FONT face=Symbol size=3>df</FONT><SUB>A</SUB></FONT>,&nbsp; <FONT size=2><FONT face=Symbol size=3>df</FONT><SUB>B</SUB></FONT>,&nbsp; <FONT size=2><FONT face=Symbol size=3>df</FONT><SUB>C</SUB></FONT>&nbsp; and&nbsp; <FONT size=2><FONT face=Symbol size=3>df</FONT><SUB>D</SUB></FONT>&nbsp;  
+               are the transformation shifts obtained from the grid file for nodes A, B, C and D respectively.</p>
+    </UL>
+  </OL>
+    <P>Similarly, the above formulae is used to interpolate the longitude (<FONT face=Symbol size=3>l</FONT>) coordinate shift,
+     the latitude accuracy (<FONT size=2><FONT face=Symbol size=3>f</FONT><SUB>Acc</SUB></FONT>) and 
+     the longitude accuracy (<FONT size=2><FONT face=Symbol size=3>l</FONT><SUB>Acc</SUB></FONT>). 
+     The concept of bi-linear interpolation is shown in figure 2.<P>
+  <P>&nbsp;</P>
+	<P class=proclabel>Figure 2 - Bi linear interpolation</P>
+	<P><a><IMG alt="Concept of bi-linear interpolation" border=0 src="..\images\blinterpolation.gif" ></a></P>
+  <P>&nbsp;</P>
+  <P>   After the&nbsp;latitude (<FONT face=Symbol size=3>f</FONT>) and longitude (<FONT face=Symbol size=3>l</FONT>) coordinate shifts have been interpolated, 
+  the <A href="SRC =html\popup.txt TOPIC=IDH_FORWARD" id=wPopup>forward transformation</A> of coordinates is completed by simply adding the&nbsp;interpolated coordinate shifts 
+  to the&nbsp;input coordinates of point (p).</P>
+  <P>Where a <A href="SRC =html\popup.txt TOPIC=IDH_REVERSE" id=wPopup>reverse transformation</A>           
+  is required, an iterative process is used. In brief, the formulae shown 
+  above is used to compute an approximate value of the interpolation 
+  point by interpolating the shifts for latitude and longitude at the initial 
+  point (P) and subtracting it from the GDA2020 coordinates.&nbsp;This point is then put back 
+  into the interpolation formulae to compute a second set of shifts. These new 
+  shifts are&nbsp;subtracted from the original GDA2020 coordinates to obtain a closer estimate 
+  of the GDA94 coordinates. This process needs to be iterated only three 
+  times to compute GDA94 coordinates of sufficient accuracy.</P></LI>
+</OL>
+<P>&nbsp;</P>
+<P class=note>Notes</P>
+<UL>
+    <LI>For more information about the NTv2 file format refer to Appendix B of the GDAy User's Guide. </LI></UL>
+<P> &nbsp;</P>
+<P><A href="CHM =gday.chm META=ntv2_format;conformal_trans_formula;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

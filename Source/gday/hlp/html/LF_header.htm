@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Modify the log file header</title>
+<META NAME="MS-HAID" CONTENT="log_file_header">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<P>
+<a name="hid_log_header"></a>
+<b>To modify the log file header</b></P>
+<OL>
+<li> On the <b>Tools</b> menu, click 
+  <B>Options </B>  and then click the <b>Log File</b> tab.
+  <LI>
+In the <b>Add header to log file</b> text box, add the information relevant to your needs. 
+  <LI>Wherever you type in  <code>&lt;&lt; Date &gt;&gt;</code> (exactly, with only one 
+  space either side of the word “Date”), the full system date at the time of 
+  creating the file will be printed to the log file. For example, if the 
+  following is typed into the text box: 
+  
+<p>
+<BLOCKQUOTE >
+/////////// GDAy Transformation Log File 
+    ///////////
+    <P></P>
+<p>
+Created:  &lt;&lt; Date &gt;&gt;</p>
+<p>
+Version 3.0</p>
+<p>
+///////////////////////////////////////////////////////////////////////////</p></BLOCKQUOTE>
+  <P>&nbsp;</P>
+  <P>the following will be printed to the log file:</P>
+<BLOCKQUOTE >
+<pre>///////////            GDAy Transformation Log File             ///////////
+
+Created: Tuesday, 26 March 2002, 01:12:13 PM. 
+
+Version 3.0</pre>
+<p>
+<code>///////////////////////////////////////////////////////////////////////////</code></p></BLOCKQUOTE>            
+                  
+              </LI></OL>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>
+<p>
+Note that the text will not appear exactly in the log file as it does in the text box.</p>
+<li>
+You can enter in a maximum of 500 printable characters.
+  
+<li>
+To place a “newline” character, put the cursor where you want it to be in the text box and press <b>Ctrl + Enter</b>.
+  
+<li>
+Your data will still be printed correctly even if it extends past the width of the text box.</li>
+</ul>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=log_file_settings;log_file_print;log_file_view" id=relTopics>Related Topics</A></P>
+</BODY>
+</HTML>

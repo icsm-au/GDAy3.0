@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Conformal Transformation formula</title>
+<META NAME="MS-HAID" CONTENT="conformal_trans_formula">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_conformal_trans_formula">Conformal transformation (7 Parameter) formula</a></h1>
+<p>The formula used by GDAy to transform coordinates on one 
+datum to another using a conformal transformation method is the Bursa Wolf 
+model. This method of transformation is related specifically to the 
+reference frame from which the coordinates were derived and is computed in terms 
+of earth-centred, cartesian coordinates of (X, Y, Z). The relationship is developed as a 
+set of 7 parameters: 3 origin translation elements (DX, DY, DZ), 3 rotations for 
+the coordinate axes (RX, RY, RZ), and a scale factor. Figure 1 shows the 
+effect of applying a 7-parameter transformation to three-dimensional cartesian coordinates.</p>
+<P>&nbsp;</P>
+<P class=proclabel>Figure 1 - 3D 7 - parameter transformation concept</P>
+<P><a><IMG alt="Concept of transforming earth-centred, cartesian coordinates using a conformal transformation" border=0 src="..\images\conformal.gif" ></a></P>
+<P>The Bursa Wolf model is given by:</P>
+<OL>
+<P><a><IMG alt="The Bursa Wolf model" border=0 src="..\images\bursawolf.gif" ></a></P>
+<P>where:</P>
+<OL>
+<TABLE>
+<TR>
+<TD style="BACKGROUND-COLOR: transparent; TEXT-ALIGN: right">(X<SUB>1</SUB>, Y<SUB>1</SUB>, Z<SUB>1</SUB>)</TD><TD style="BACKGROUND-COLOR: transparent">&nbsp;are the given earth-centred cartesian coordinates of a point relative reference frame A</TD>
+</TR>
+<TR>
+<TD style="BACKGROUND-COLOR: transparent; TEXT-ALIGN: right">(X, Y, Z)</TD><TD style="BACKGROUND-COLOR: transparent">&nbsp;are the computed earth-centred cartesian coordinates of a point relative to reference frame B</TD>
+</TR>
+<TR>
+<TD style="BACKGROUND-COLOR: transparent; TEXT-ALIGN: right">(<FONT face=symbol>D</FONT>X<SUB>1</SUB>, <FONT face=symbol>D</FONT>Y<SUB>1</SUB>, <FONT face=symbol>D</FONT>Z<SUB>1</SUB>)</TD><TD style="BACKGROUND-COLOR: transparent">&nbsp;are the origin translation elements from reference frame A to reference frame B</TD>
+</TR>
+<TR>
+<TD style="BACKGROUND-COLOR: transparent; TEXT-ALIGN: right">(R<SUB>X</SUB>, R<SUB>Y</SUB>, R<SUB>Z</SUB>)</TD><TD style="BACKGROUND-COLOR: transparent">&nbsp;are the rotation elements for each axis (in radians) from reference frame A to reference frame B</TD>
+</TR>
+<TR>
+<TD style="BACKGROUND-COLOR: transparent; TEXT-ALIGN: right">Sc</TD><TD style="BACKGROUND-COLOR: transparent">&nbsp;is the scale factor between the two reference systems (in parts per million, ppm)</TD>
+</TR>
+<TR>
+<TD style="BACKGROUND-COLOR: transparent; TEXT-ALIGN: right">(X<SUB>m</SUB>, Y<SUB>m</SUB>, Z<SUB>m</SUB>)</TD><TD style="BACKGROUND-COLOR: transparent">&nbsp;are the average position of the points used to compute the reansformation parameters</TD>
+</TR>
+</TABLE>
+</OL>
+<P>&nbsp;</P>
+</OL>
+<P>The Bursa Wolf model shown above is appropriate for small 
+rotation angles (ie. less than 5 seconds of arc) in the coordinate axes and is 
+generally applicable to coordinate transformations between reference 
+ellipsoids.</P>
+<P>&nbsp;</P>
+<P class=important>Important</P>
+<UL>
+  <LI>     Before you use the above formula, ensure that you 
+  are using the&nbsp;appropriate transformation parameters.</LI></UL>
+<P CLASS="note">Notes</P>
+<UL>       
+  <LI>These parameters can be used for projects of medium 
+  accuracy (of the order 1 m). <a href="DT_interpolation_formula.htm">The Grid Transformation</a> method must be used for 
+  projects requiring greater accuracy.       
+  <LI>National parameters to convert between GDA94 and GDA2020 
+  coordinate sets&nbsp;are available in the <A 
+  href="http://www.anzlic.org.au/icsm/gdatm/" id=extUrl target=_new 
+  title=http://www.anzlic.org.au/icsm/gdatm/>GDA Technical Manual</A><SPAN 
+  class=printOnly>(http://www.anzlic.org.au/icsm/gdatm/)</SPAN>.
+  <LI>To transform <A 
+  href="SRC =html\popup.txt TOPIC=IDH_GEOGRAPHIC" id=wPopup>geographic 
+  coordinates</A> using this method, the coordinates must be transformed to 
+  cartesian coordinates. For more information, see <A href="CC_cart2geo.htm">Cartesian to geographic (earth centred XYZ to spheroid) formula</A>.</LI></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=bilinear_algorithm;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

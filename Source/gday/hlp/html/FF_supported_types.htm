@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Supported file types</title>
+<META NAME="MS-HAID" CONTENT="supported_file_types">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_supported_file_types"></a>Supported file types</h1>
+<p>
+GDAy supports Formatted text files (*.dat, *.prn, *.txt), Comma separated files (*.csv), <b>SCDB</b> files (*.man), <b>NEWGAN res</b> files (*.res) and <b>Queensland Interchange Format</b> (QIF) files (*.qif). For the technical specifications on the format of SCDB, NEWGAN res and QIF files, contact the Geodetic Survey Section, Department of Natural Resources, QLD. </p>
+<p>
+It is <b>not</b> recommended that you attempt to create SCDB or QIF files for your input coordinates. The facility to transform SCDB and QIF files is for the purpose of transforming those files issued from the Department of Natural Resources, QLD only.</p>
+<p>
+When transforming formatted text and comma separated files, you can specify your input coordinate type to be any one of the available types. For files that contain geographic coordinates, you can format the latitude and longitude values using one of five types: <b>Decimal Degrees</b>, <b>DMS</b> <b>HP Notation</b>, <b>Separated</b> <b>DMS Fields</b>,<b> DMIN</b> <b>HP Notation</b>, and <b>Separated</b> <b>DMIN Fields</b>. See Formatting options for geographic coordinates for more information on the accepted formatting types.</p>
+<p>
+An important note to make is that you can not have different coordinate types in the input file to be transformed. For example, when you are transforming geographic coordinates, you can not have latitude and longitude on one record and easting, northing and zone on another. Similarly, if you are transforming a file of geographic coordinates, you must use only one type of format for all values within the file.</p>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>
+You do not need to have a header record within the 
+  file. For every record that is read from the file that does not contain valid 
+  coordinates, the record is printed to the log file. This includes any textual 
+  nomenclature or narrations within the file.
+  
+<li>
+For SCDB (*.man) files, you do not need to worry 
+  about selecting the coordinates type or whether it is in decimal degrees, HP 
+  Notation or Separated DMS fields for either input or output files.
+  
+<li>
+For NEWGAN res (*.res) and QIF (*.qif) files, you must select the correct coordinates type for the input and output files. If you have selected the wrong input coordinates type, GDAy will halt the file transformation and prompt you with an error message. If either *.res or *.qif files are in geographic coordinates, you don’t have to worry about whether it is in decimal degrees, HP Notation or Separated DMS fields for either input or output files. Since all geographic data within *.qif files are in decimal degrees, and all geographic data within *.res files are in degrees, minutes and seconds, this option is overridden.</li>
+</ul>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=dat_file_format;csv_file_format;format_geo_options" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

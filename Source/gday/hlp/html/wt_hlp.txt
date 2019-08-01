@@ -1,0 +1,6 @@
+.topic 1
+help text for control 1
+.topic 2
+help text for control 2
+.topic 3
+help text for control 3

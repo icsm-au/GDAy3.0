@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Choosing a distortion grid file</title>
+<META NAME="MS-HAID" CONTENT="choose_ntv2_grid">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html;charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<p class="proclabel"><a name="hidd_grid_and_params">To select the distortion grid file</a></p>
+<OL>
+<li>
+Point to <B>Distortion Grid Settings</B> on the 
+  <B>File</B> menu, and then click <B>Select New Grid File</B>. 
+  <LI>       
+Click <b>Browse</b>.
+<li>
+In the <b>Look in</b> box, click the drive or folder that contains the distortion grid file.
+<li>
+In the <b>Files of type</b> box, choose the appropriate grid file-type or format (note: the available types include ASCII (*.asc) and Binary (*.gsb) files).
+<li>
+In the folder list, double-click folders until you open the folder that contains the file.
+<li>
+Double-click the distortion grid you want to use.</li></OL>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>
+For more help on selecting a distortion grid and transformation parameters, see Choosing a distortion grid file.
+<li>
+To obtain the latest version of the national GDA94 distortion grid, download it from the ICSM GitHub Site.
+<li>
+If you experience any difficulties in obtaining the grids, contact the ICSM.
+<li>
+If there is no distortion grid for your area, you may still perform 7-Parameter 
+  transformations (medium accuracy ~ of the order 1 m) on the main GDAy dialog. 
+</li>
+<li>
+If there is no distortion grid for your area, you may still perform 7-Parameter transformations (medium accuracy ~ of the order 1 m) on the main GDAy dialog.
+</li></UL>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<p>
+<b>Transformation Parameters</b></p>
+<p>
+ Whenever you are transforming a single point or a 
+file of points and the point being transformed lies outside the limits of 
+the distortion grid, a 7-Parameter&nbsp;datum transformation (also known as a 
+3-Dimensional similarity transformation) may be performed. In this case, it is 
+important that you select the most appropriate transformation parameters for 
+your area of interest. For more information, see <A href="DT_7par_formula.htm">Conformal transformation (7 Parameter) formula</A>.</p>
+<p>
+<ol>
+<li>
+Point to <B>Distortion Grid Settings</B> on the 
+  <B>File</B> menu, and then click <B>Select New Grid File</B>.
+  <LI>
+From the <b>Parameters</b> drop-down 
+  combo box, click on the desired transformation parameters. 
+  
+<li>
+Click OK to accept the changes.</li>
+</ol>
+<P>&nbsp;</P>
+<P CLASS="note">Note</P>
+<ul>
+<li>
+These parameters can be used for projects of medium 
+  accuracy (of the order 1 m). To achieve the greatest accuracy, the 
+  transformation of a point must incorporate the distortion grid.  
+<li>
+When you have selected a new distortion grid, the 
+  filename is displayed in the status bar on the bottom of the main GDAy dialog.  
+<li>
+If an invalid grid file is chosen, or the grid file is 
+  corrupt, then you will be prompted to continue with a conformal 7-Parameter 
+  coordinate transformation each time a transformation is performed.  
+<li>
+Although this method of coordinate transformation requires a valid ellipsoidal height, you are not prompted to enter in any such value. Where a 7-Parameter coordinate transformation is performed, an ellipsoidal height of zero (0) is used by default.</li>
+</ul>
+<P><A id=relTopics href="META =bilinear_algorithm;ntv2_format;ntv2_binary_files;ntv2_view_properties;ntv2_gridex;choose_ntv2_grid" >Related Topics</A></P>
+</BODY>
+</HTML>

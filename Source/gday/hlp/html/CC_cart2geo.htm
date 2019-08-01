@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Cartesian to geographic formula</title>
+<META NAME="MS-HAID" CONTENT="cart_to_geo_formula">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_cart_to_geo_formula">Cartesian to geographic (earth centred XYZ to spheroid) formula</a></h1>
+<p>The formula used by GDAy to convert three dimensional, 
+earth-centred cartesian coordinates of X, Y and Z to geographic 
+coordinates of latitude, longitude and ellipsoidal height (<A 
+style="FONT-FAMILY: Symbol">f, l,</A> h) is Bowring's formula (Bowring, 1985).</p>
+<P>           
+To evaluate Bowring's formula the radius of curvature must be computed. The 
+formulae for these are shown in <A href="CC_prelimcalc.htm">Preliminary calculations</A>.</P>
+<OL>
+  <LI><h3>Latitude</h3>  
+  <UL>
+  <P><IMG src="..\images\tanlat.gif" ></P><P>&nbsp;</P></UL>
+  <LI><h3>Longitude</h3>
+  <UL>
+  <P><IMG src="..\images\tanlon.gif" ></P><P>&nbsp;</P></UL>
+  <LI><h3>Ellipsoidal height</h3> 
+  <UL>
+  <P><IMG src="..\images\ellipht.gif"></P>
+  <P>where:</P>
+  <UL>
+  <P><IMG src="..\images\p.gif"><BR><BR>
+  <IMG src="..\images\r.gif"><BR><BR>
+  <IMG src="..\images\tanbeta.gif"></P></UL><P>&nbsp;</P></UL>
+  </LI></OL>
+<P>&nbsp;</P>
+<P class=important>Important</P>
+<UL>
+  <LI>Before&nbsp;you&nbsp;use the above formula, ensure that you have selected the correct reference 
+  ellipsoid in the preliminary calculations.</LI></UL>
+<P CLASS="note">Note</P>
+<UL>       
+  <LI>For more information, see the topic <STRONG>Conversion between Geographical and Cartesian Coordinates</STRONG> in the <A HREF="http://www.anzlic.org.au/icsm/gdatm/" TITLE="http://www.anzlic.org.au/icsm/gdatm/" TARGET="_new">GDA technical Manual</A><SPAN CLASS="printOnly">(http://www.anzlic.org.au/icsm/gdatm/)</SPAN>.</LI></UL>
+  
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=preliminary_calculations;geo_to_grid_formula;grid_to_geo_formula;geo_to_cart_formula;what_you_should_know" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Comma separated values files (*.csv)</title>
+<META NAME="MS-HAID" CONTENT="csv_file_format">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_trans_csv_file"></a>Comma separated values files (*.csv)</h1>
+<p>
+Every record (or line) in a comma separated file must contain data fields separated by commas. You may however, omit certain fields depending on what they are. If you choose not to enter in the non-compulsory fields, you must still enter in the commas to delineate the presence of the particular field. Below is a description of the compulsory and non-compulsory fields in the required order:</p>
+<table>
+<tr valign=top>
+<th><b>Field</b></th><th><b>Compulsory?</b></th>
+<tr valign=top>
+<td>Point ID</td><td>No</td></tr>
+<tr valign=top>
+<td>Latitude / Easting</td><td>Yes</td></tr>
+<tr valign=top>
+<td>Longitude / Northing</td><td>Yes</td></tr>
+<tr valign=top>
+<td>Orthometric Height (AHD)</td><td>No</td></tr>
+<tr valign=top>
+<td>UTM zone</td><td>Yes (only when using <A href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup >projection coordinates</A>)</td>
+</tr>
+<tr valign=top>
+<td>Datum (G94 or G20)</td><td>No</td></tr>
+<tr valign=top>
+<td>Description</td><td>No</td></tr>
+</table><br>
+<p>
+<b>Decimal Degrees:</b></p>
+<p>
+STATION B,-26.926733461,149.654651687,,55,,1st Order Control</p>
+<p>
+<b>DMS HP Notation:</b></p>
+<p>
+STATION B,-26.553624046,149.391674607,,,,1st Order Control</p>
+<p>
+<b>Separated DMS Fields:</b></p>
+<p>
+STATION B,-26,55,36.24046,149,39,16.74607,,,,1st Order Control</p>
+<p>
+<b>DMIN HP Notation:</b></p>
+<p>
+STATION B,-26.556040077,149.392791012,,,,1st Order Control</p>
+<p>
+<b>Separated DMIN Fields:</b></p>
+<p>
+STATION B,-26,55.6040077,149,39.2791012,,,,1st Order Control</p>
+<p>
+<b>Projection Coordinates</b></p>
+<p>
+STATION B,763609.224,7018902.575,,55,,1st Order Control</p>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>From the Sample Files folder where GDAy was 
+  installed, open a *.csv file that matches the file type you are working with. 
+  Copy the first line and paste this line into your new file to help you format 
+  your data using the correct number of commas.
+<LI>The UTM zone is only required when you are transforming a file of 
+  projection coordinates.    
+<li>
+When you are entering in geographic coordinates in 
+  separated DMS fields, you must include a comma to separate the degrees, 
+  minutes and seconds values. Similarly for separated DMIN fields, you must 
+  include a comma to separate the degrees and minutes values.
+  <LI>When a certain data field is not required, you must still enter in the 
+  commas to delineate the presence of the field. 
+If a record in your input file contains less than the required number of commas (ie. fields), the record is omitted from the output file and printed to the <b>log file</b>.
+<li>
+The simplest way to create a comma separated file of 
+  your own is to enter the required data in Microsoft Excel. For example, enter 
+  in the Point ID into column A, Latitude / Easting into column B, and so on 
+  (leaving the non-compulsory cells blank if not desired), then save it as a 
+  Comma separated file (*.csv).</li>
+</ul>
+<p>&nbsp;</p>
+<P><A href="CHM=gday.chm META=dat_file_format;format_geo_options;supported_file_types" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

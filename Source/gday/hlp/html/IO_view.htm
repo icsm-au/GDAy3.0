@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>View the interactive output file</title>
+<META NAME="MS-HAID" CONTENT="interactive_file_view">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<P CLASS="proclabel"><a name="hid_view_interactive_file">To view the interactive output file</a></P>
+<OL>
+<li> On the <b>File</b> menu, point 
+  to <B>Interactive Input</B>  and then click <b>View Output File</b>    . This will 
+  display the current interactive output file in Microsoft NotePad.</li>
+</OL>
+<P>&nbsp;</P>
+<P CLASS="note">Notes</P>
+<ul>
+<li>
+You can also access the Interactive Input sub 
+  menu by right clicking on the Interactive output status pane on the GDAy 
+  dialog. 
+  <LI> Each time you press <B>Compute</B> on the main GDAy dialog, your 
+  coordinates are printed to the interactive output file in a structured way so 
+  that you may use the file when opening it in another application, such as 
+  Microsoft Excel. Every record (or line) in the interactive output file 
+  contains data fields in particular file positions (or columns). Depending on 
+  what coordinate system parameters, point numbering and station naming options 
+  you have selected, certain fields may be present whilst others may not. Below 
+  is a description of the fields printed in order:
+  <P>
+  <TABLE>
+    
+    <TR vAlign=top>
+      <TH><B>Field</B></TH>
+      <TH><B>Columns</B></TH>
+      <TH><B>Characters</B></TH>
+      <TH><B>Printed?</B></TH></TR>
+    <TR vAlign=top>
+      <TD>Point ID</TD>
+      <TD>1 – 10</TD>
+      <TD>10</TD>
+      <TD>Optional</TD></TR>
+    <TR vAlign=top>
+      <TD>Input Lat / East</TD>
+      <TD>11 - 27</TD>
+      <TD>17</TD>
+      <TD>Always</TD></TR>
+    <TR vAlign=top>
+      <TD>Input Long / North</TD>
+      <TD>28 – 44</TD>
+      <TD>17</TD>
+      <TD>Always</TD></TR>
+    <TR vAlign=top>
+      <TD>Datum (G94 or G20)</TD>
+      <TD>45 – 53</TD>
+      <TD>9</TD>
+      <TD>Always</TD></TR>
+    <TR vAlign=top>
+      <TD>Output Lat / East</TD>
+      <TD>54 – 70</TD>
+      <TD>17</TD>
+      <TD>Always</TD></TR>
+    <TR vAlign=top>
+      <TD>Output Long / North</TD>
+      <TD>71 – 87</TD>
+      <TD>17</TD>
+      <TD>Always</TD></TR>
+    <TR vAlign=top>
+      <TD>Datum (G94 or G20)</TD>
+      <TD>88 – 96</TD>
+      <TD>9</TD>
+      <TD>Always</TD></TR>
+    <TR vAlign=top>
+      <TD>UTM zone</TD>
+      <TD>97 - 101</TD>
+      <TD>5</TD>
+      <TD>Only when output is in <A 
+        href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup>projection 
+        coordinates</A></TD></TR>
+    <TR vAlign=top>
+      <TD>Station Name</TD>
+      <TD>102 – 127</TD>
+      <TD>26</TD>
+      <TD>Optional</TD></TR>
+    <TR vAlign=top>
+      <TD>Latitude accuracy</TD>
+      <TD>128 – 134</TD>
+      <TD>7</TD>
+      <TD>Only when accuracy can be interpolated</TD></TR>
+    <TR vAlign=top>
+      <TD>Longitude accuracy</TD>
+      <TD>135 - 141</TD>
+      <TD>7</TD>
+      <TD>Only when accuracy can be interpolated</TD></TR></TABLE></P>
+  <LI>By default, all geographic coordinates are printed 
+  using a precision of 5 decimal places for seconds and 9 decimal places for 
+  decimal degrees. When you are working with projection coordinates, the 
+  coordinates are printed using a precision of 3 decimal places for metres. This 
+  can not be changed. 
+  <P>For example,&nbsp;below is an extract from a typical interactive output 
+  file (omitting the header) </P><PRE>Point No  <B>Input</B> Lat/East     Long/North   Datum   <B>Output</B> Lat/East      Long/North  Datum  Zone Station Name            Accuracy
+____________________________________________________________________________________________________________________________________
+105441   -27 32 05.41000  153 03 54.65120  G94         506436.083      6954312.245  G94    56  Projection Coordinates  ----   ----
+105442   -27 32 05.41000  153 03 54.65120  G94    -27 32 05.41000  153 03 54.65120  G94        Separated DMS fields    ----   ----
+105443   -27 32 05.41000  153 03 54.65120  G94      -27.534836111    153.065180889  G94        Decimal degrees         ----   ----
+105443   -27 32 05.41000  153 03 54.65120  G94     -27 32.0901667   153 03.9108533  G94        Separated DMIN fields   ----   ----</PRE>            
+               
+             
+             </LI>
+</ul>
+<p>&nbsp;</p>
+<P><A href="CHM =gday.chm META=interactive_file_settings;interactive_file_print" id=relTopics>Related Topics</A></P>
+</BODY>
+</HTML>
+

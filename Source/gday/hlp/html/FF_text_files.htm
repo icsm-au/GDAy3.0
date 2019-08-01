@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Formatted text files</title>
+<META NAME="MS-HAID" CONTENT="dat_file_format">
+<META HTTP-EQUIV="Content-Type" CONTENT="text-html; charset=Windows-1252">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<h1><a name="hid_trans_dat_file"></a>Formatted text files (*.dat, *.prn, *.txt)</h1>
+<p>
+ Every record (or line) in a formatted text file must contain data fields in particular file positions (or columns). You may omit certain fields depending on what they are. Below is a description of the compulsory and non-compulsory fields in the required order:</p>
+<table>
+<tr valign=top>
+<th><b>Field</b></th><th><b>Columns</b></th><th><b>Characters</b></th><th><b>Compulsory? </b></th>
+<tr valign=top>
+<td>Point ID</td><td>1 – 11</td><td>11</td><td>No</td></tr>
+<tr valign=top>
+<td>Latitude / Easting</td><td>12 - 27</td><td>16</td><td>Yes</td></tr>
+<tr valign=top>
+<td>Longitude / Northing</td><td>28 - 43</td><td>16</td><td>Yes</td></tr>
+<tr valign=top>
+<td>Orthometric Height (AHD)</td><td>44 - 52</td><td>9</td><td>No</td></tr>
+<tr valign=top>
+<td>UTM zone</td><td>53 - 55</td><td>3</td><td>Yes (only when using <A href="SRC=html\popup.txt TOPIC=IDH_PROJECTION" id=wPopup >projection coordinates</A>)</td></tr>
+<tr valign=top>
+<td>Datum (G94 or G20)</td><td>56 - 59</td><td>4</td><td>No </td></tr>
+<tr valign=top>
+<td>Description</td><td>60 - 85</td><td>26</td><td>No</td></tr>
+</table>
+
+<P CLASS="note">Notes</P>
+<UL>
+<li>From the Sample Files folder where GDAy was 
+  installed, open a *.dat file that matches the file type you are working with. 
+  Copy the first line and paste this line into your new file to help you format 
+  your data to the correct field widths.
+<LI>The UTM zone is only required when you 
+  are transforming a file of projection coordinates.  
+<li>If your input data description (ie. columns 60 to 85) 
+  contains more than 26 characters, it is truncated to 26 characters long.</li></UL>
+<P>&nbsp;</P>
+<P><A href="CHM =gday.chm META=csv_file_format;format_geo_options;supported_file_types" id=relTopics >Related Topics</A></P>
+</BODY>
+</HTML>

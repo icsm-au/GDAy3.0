@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<title>Transforming multiple files</title>
+<META NAME="MS-HAID" CONTENT="file_tran_multiple_files">
+<LINK REL="stylesheet" MEDIA="print" TYPE="text/css" HREF="coUAprint.css">
+<LINK REL="stylesheet" MEDIA="screen" TYPE="text/css" HREF="coUA.css">
+<SCRIPT LANGUAGE="JScript" SRC="shared.js"></SCRIPT>
+</HEAD>
+<BODY>
+<p class="proclabel"><a name="hid_file_tran_multiple_files">To transform multiple files</a></p>
+<OL>
+<li>On the <B>File</B> menu, select <b>Transform Points File</b>.  
+<li>Click <b>Browse</b>.  
+<li>In the <b>Look in</b> box, click the drive or folder that contains the input file.
+<li>In the <b>Files of type</b> box, choose the appropriate input file-type (note: the available types include 
+  Formatted Text (*.dat, *.prn, *.txt), Comma Separated Files (*.csv) files), 
+  SCDB files (*.man), NEWGAN res files (*.res), and Queensland Interchange 
+  Format (*.qif).  
+<li>In the folder list, double-click folders until you open the folder that contains the required files.
+<li>Highlight all the input files you want to use, and then click OK.
+<li>If you are transforming a file of geographic coordinates in degrees, minutes and seconds, select the appropriate radio 
+  buttons from the Input and Output File Groups. This radio button option is 
+  greyed when you are transforming SCDB files (*.man), NEWGAN Res files (*.res) 
+  or Queensland Interchange Format files (*.qif).
+<li>Click <b>OK</b>.</li></OL>
+<P>&nbsp;</P>
+<P class=important>Important</P>
+<UL>
+  <LI> Before attempting 
+  to transform multiple files, ensure that you have selected the right 
+  coordinate system parameters .</LI></UL>
+<P class=note>Notes</P>
+<UL>
+  <LI>
+<div>You can not use this multiple file transformation function to transform files that contain 
+coordinates of different types. Similarly, all input files must be of the same file format.
+If you are transforming multiple Formatted Text or Comma Separated files that contain geographic 
+coordinates, ensure that they are all in the same format, ie. decimal degrees; degrees minutes and seconds; or HP notation.</div>
+  <LI>
+  <DIV>Upon selecting multiple files in step 6, the output<b> File Name </b>edit box and <b>Save As</b> 
+  button are greyed to restrict you from output file selection. For every 
+  file you selected, the output file names will be exactly that of the input 
+  file names with a ‘_’ character inserted at the front of the file name. For 
+  example, if you selected the files “GDA94 HP1.dat” and “GDA94 HP2.dat” the 
+  output file names will be “_GDA94 HP1.dat” and “_GDA94 HP2.dat” 
+  respectively.</DIV>
+<li>
+If you are transforming a Queensland Interchange 
+  Format file (*.qif) and the coordinates to be printed to the output file are 
+  projection coordinates, you will be prompted to specify a zone for the output 
+  file. Specifying a unique zone will ensure that all transformed coordinates 
+  will be projected over a single zone, regardless of how far east and west the 
+  file spans. 
+  
+<li>
+After the files have been successfully transformed, you will be prompted to transform another file. 
+If at least one point in the input file could not be transformed, or an error occurred in the file-read/write 
+process, the particular error details and the input coordinates are printed to the<b> </b><A href="LF_view.htm">Log File</A>. 
+  <LI>
+<div>If any of the points within the file lie outside the limits of the distortion grid, they will be transformed 
+using a 7-Parameter conformal transformation. In this case, the transformation parameters selected from the 
+Select Distortion Grid dialog box will be used. For more information, see “Transformation Parameters” from Choosing 
+a distortion grid file.</div>
+<li>
+For formatted text and comma separated files only, 
+  the corresponding interpolation accuracy values are printed at the end of each 
+  line in the output file. If the accuracy values could not be determined, 3 
+  dashes: “ --- “ will be printed instead. 
+  <LI>
+<div>
+You can view the Log file by selecting <B>View 
+  Log File</B> on the <B>Tools</B> menu.</div>
+  <LI>
+  <DIV>
+If you want to transform latitudes and longitudes and the <b>Separated DMS fields</b> and <b>HP Notation</b> option 
+is transparent, then you will have to go back to the <b>Coordinate System</b> dialog box to select the right 
+  coordinate type. </DIV></LI></UL>
+<P>&nbsp;</P>
+<P><A 
+href="CHM =gday.chm META=choose_ntv2_grid;choosing_coordinate_system;conformal_trans_formula;bilinear_algorithm;dat_file_format;csv_file_format;;format_geo_options;supported_file_types" id=relTopics>Related Topics</A></P>
+</BODY>
+</HTML>
