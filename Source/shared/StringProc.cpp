@@ -79,7 +79,7 @@ CString CStrProc::AddSymbology(CString strNumber, T_user theUser, int iFlag)
 			}
 
 			strBuf.SetAt(decimal, ' '); 
-			strBuf.Insert(decimal, '°');
+			strBuf.Insert(decimal, 'Â°');
 						
 			if (isDMS == DMS)		// ddd.mmssss
 			{
@@ -122,7 +122,7 @@ CString CStrProc::AddSymbology(CString strNumber, T_user theUser, int iFlag)
 			}
 		}	
 		else
-			strBuf += "°";		// couldn't find a decimal point
+			strBuf += "Â°";		// couldn't find a decimal point
 	}
 	else
 	{
@@ -281,14 +281,21 @@ int CStrProc::GetFields(char *line, char delim, char *fmt, ...)
 {
 	va_list ap;
 	int field[50], i, j;
+	bool in_quote = false; // Used to ignore delimters in quotes
 
 	i = j = 0;
 	field[j++] = i;
 
 	while(line[i] != '\n' && line[i] != NULL)
 	{
-		// replace all delimiters with NULL
-		if(line[i] == delim)
+		// if there is a quote, toggle the in_quote var
+		if (line[i] == '"')
+		{
+			in_quote = !in_quote;
+		}
+		
+		// replace all delimiters with NULL if not inside quotes
+		if((line[i] == delim)&&(!in_quote))
 		{
 			line[i] = '\0';
 			field[j++] = i+1;
@@ -348,7 +355,7 @@ CString CStrProc::FormatString(CString strValue)
 			decimal++;
 		}
 
-		strInput.SetAt(decimal, '°');
+		strInput.SetAt(decimal, 'Â°');
 		strInput.Insert(decimal + 1, " ");
 		strInput.Insert(decimal + 4, "' ");
 		length = strInput.GetLength();
@@ -357,7 +364,7 @@ CString CStrProc::FormatString(CString strValue)
 		strInput += "\"";
 	}
 	else
-		strInput += "° 00' 00\"";			// couldn't find a decimal point
+		strInput += "Â° 00' 00\"";			// couldn't find a decimal point
 
 	return strInput;
 }
